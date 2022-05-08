@@ -30,12 +30,34 @@ python zambia3A.py
 python zambia3B.py
 python zambia3C.py
 ============================================================20
-20- UCI-HAR algorithm
-
+```
+## 2 - UCI-HAR algorithm
+```
 python dataTable.py
 python uciharData.py
 
 conda activate diploma3
+
+============================================================30
+```
+
+## Links
+```
+
+https://www.tensorflow.org/tutorials/customization/custom_training_walkthrough
+https://towardsdatascience.com/deep-learning-with-python-neural-networks-complete-tutorial-6b53c0b06af0
+https://realpython.com/python-ai-neural-network/
+
+pip install tensorflow_datasets
+pip install shap
+```
+============================================================20
+## 3 - Deep-Learning algorithm
+```
+python keras1.py
+python keras2.py
+python kmodel3.py
+python nnet4.py
 
 ============================================================30
 ```

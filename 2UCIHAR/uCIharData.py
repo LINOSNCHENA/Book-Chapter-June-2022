@@ -126,6 +126,6 @@ print(df.shape)
 print(train.shape)
 print(train)
 train.to_csv('./../XYZ/ucihar1.csv', header=1, index=0)
-test.to_csv('./../XYZ/ucihart2.csv', header=1, index=0)
+test.to_csv('./../XYZ/ucihar2.csv', header=1, index=0)
 
 print('==================================|First_Successfully_Completed|===============================11===============')
