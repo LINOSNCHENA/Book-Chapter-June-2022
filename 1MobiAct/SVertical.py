@@ -114,8 +114,15 @@ dataframe = dataframe.iloc[0:19090:, -15:]  # 22-Records, last-15 headers
 array = dataframe.values
 X = array[:, 1:19]
 y = array[:, 10:19]
-X = dataframe[['x1']]
-y = dataframe[['x2']]
+print(array)
+print(dataframe)
+
+# X = dataframe[['x1']]
+# y = dataframe[['x2']]
+
+X = dataframe[['x_acc']]
+y = dataframe[['y_acc']]
+
 regr = LinearRegression()
 regr.fit(X, y)
 # Plot outputs
