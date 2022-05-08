@@ -24,3 +24,5 @@ _, accuracy = model.evaluate(x, y)
 print("Model accuracy: %.2f"% (accuracy*100))
 predictions = model.predict(x)
 print([round(x[0]) for x in predictions])
+
+print('===========================Two==========================================')

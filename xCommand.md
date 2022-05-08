@@ -54,6 +54,8 @@ pip install shap
 ============================================================20
 ## 3 - Deep-Learning algorithm
 ```
+conda activate diploma3
+
 python keras1.py
 python keras2.py
 python kmodel3.py

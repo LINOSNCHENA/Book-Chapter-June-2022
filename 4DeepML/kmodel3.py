@@ -1,6 +1,8 @@
 from tensorflow.keras import models, layers, utils, backend as K
 import matplotlib.pyplot as plt
 import shap
+import tensorflow as tf
+tf.compat.v1.disable_v2_behavior()
 
 n_features = 10
 model = models.Sequential(name="DeepNN", layers=[
@@ -170,8 +172,69 @@ for metric in metrics:
     ax22.plot(training.history['val_'+metric], label=metric)    
     ax22.set_ylabel("Score", color="steelblue")    
 #plt.show()
+plt.suptitle("========tile3================")
 plt.savefig("3_AI_manual.png")
-plt.savefig('../UXviews/table4/T2.png')
+plt.savefig('../UXviews/table4/T3.png')
 plt.show()
 
 print('===========================Threee==========================================')
+'''
+Use shap to build an a explainer.
+:parameter
+    :param model: model instance (after fitting)
+    :param X_names: list
+    :param X_instance: array of size n x 1 (n,)
+    :param X_train: array - if None the model is simple machine learning, if not None then it's a deep learning model
+    :param task: string - "classification", "regression"
+    :param top: num - top features to display
+:return
+    dtf with explanations
+'''
+def explainer_shap(model, X_names, X_instance, X_train=None, task="classification", top=10):
+    ## create explainer
+    ### machine learning
+    if X_train is None:
+        explainer = shap.TreeExplainer(model)
+        shap_values = explainer.shap_values(X_instance)
+    ### deep learning
+    else:
+        explainer = shap.DeepExplainer(model, data=X_train[:100])
+        shap_values = explainer.shap_values(X_instance.reshape(1,-1))[0].reshape(-1)
+
+    ## plot
+    ### classification
+    if task == "classification":
+        shap.decision_plot(explainer.expected_value, shap_values, link='logit', feature_order='importance',
+                           features=X_instance, feature_names=X_names, feature_display_range=slice(-1,-top-1,-1))
+    ### regression
+    else:
+        shap.waterfall_plot(explainer.expected_value[0], shap_values, 
+                         #   features=X_instance,
+                           #  feature_names=X_names, 
+                         #    max_display=top
+                             )
+i = 1
+list_feature_names=['Sex_male','cabin_section_D','Fare','Pclass_2', 'SibSp','Embarked_Q','Pclass_3','Cabin_section_n','Cabin_section_E','Age']
+explainer_shap(model, 
+               X_names=list_feature_names, 
+               X_instance=X[i], 
+               X_train=X, 
+               task="classification", #task="regression"
+               top=10)
+plt.suptitle('cOMBINED-3a-scratch.png')
+plt.title('cOMBINED-3b-scratch.png')
+plt.savefig('3-scratch.png')
+plt.savefig('../UXviews/table4/T3B.png')
+
+# explainer_shap(model, 
+#                X_names=list_feature_names, 
+#                X_instance=X[i], 
+#                X_train=X, 
+#                task="regression",
+#                top=10)
+# plt.suptitle('cOMBINED-3a-scratch.png')
+# plt.title('cOMBINED-3b-scratch.png')
+# plt.savefig('3-scratch.png')
+# plt.savefig('../UXviews/table4/T3C.png')
+
+print('====================|END-tHREE|====================')
