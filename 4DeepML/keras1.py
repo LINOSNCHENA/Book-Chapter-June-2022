@@ -41,7 +41,7 @@ plt.scatter(features[:, 0],
             c=labels,
             cmap='viridis')
 
-plt.title("1-Visualization of the three-types of Penguins")
+plt.title("1A-Visualization of the three-types of Penguins")
 plt.xlabel("Body Mass")
 plt.ylabel("Culmen Length")
 plt.savefig('../UXviews/table4/T1.png')
@@ -140,7 +140,7 @@ axes[1].set_ylabel("Accuracy", fontsize=14)
 axes[1].set_xlabel("Epoch", fontsize=14)
 axes[1].plot(train_accuracy_results)
 # plt.show()
-plt.suptitle("2-Visualaization of the loss and accuracy of prediction")
+plt.suptitle("1B-Visualaization of the loss and accuracy of prediction")
 plt.savefig("1_AI_manual.png")
 plt.savefig('../UXviews/table4/T2.png')
 plt.show()

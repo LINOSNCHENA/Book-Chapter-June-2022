@@ -106,26 +106,26 @@ df2.drop('rel_time', axis=1, inplace=True)
 
 print('==================================|make_dataframe_Then_save|====================================[4]==============')
 df3 = pd.DataFrame(df1)
-df3.to_csv(r'XYZ/XMobiAct1.csv', index=0)
+df3.to_csv(r'./../5dataXYZ/XMobiAct1.csv', index=0)
 df3 = pd.read_csv('XYZ/XMobiAct1.csv', header=0, delimiter=',')  # 32-Years
-df3.to_csv(r'XYZ/XMobiAct2.csv', index=0)
+df3.to_csv(r'./../5dataXYZ/XMobiAct2.csv', index=0)
 print(df3.shape)
 
 df4 = pd.DataFrame(df2)
-df4.to_csv(r'XYZ/XMobiAct3.csv', index=0)
+df4.to_csv(r'./../5dataXYZ/XMobiAct3.csv', index=0)
 df4 = pd.read_csv('XYZ/XMobiAct3.csv', header=0, delimiter=',')  # 32-Years
-df4.to_csv(r'XYZ/XMobiAct4.csv', index=0)
+df4.to_csv(r'./../5dataXYZ/XMobiAct4.csv', index=0)
 print(df4.shape)
 
 df5 = pd.concat([df3, df4])
 df5 = pd.DataFrame(df5)
-df5.to_csv(r'XYZ/XMobiAct5.csv', index=0)
+df5.to_csv(r'./../5dataXYZ/XMobiAct5.csv', index=0)
 df5 = pd.read_csv('XYZ/XMobiAct5.csv', header=0, delimiter=',')  # 32-Years
-df5.to_csv(r'XYZ/XMobiAct6.csv', index=0)
+df5.to_csv(r'./../5dataXYZ/XMobiAct6.csv', index=0)
 print(df5.shape)
 
 df6 = pd.read_csv('XYZ/XMobiAct6.csv', header=1, delimiter=',')  # 32-Years
-df6.to_csv(r'XYZ/XMobiAct7.csv', index=0)
+df6.to_csv(r'./../5dataXYZ/XMobiAct7.csv', index=0)
 print(df6.shape)
 
 print('==================================|Plot_ONE|=================================================[5]============')

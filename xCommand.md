@@ -7,8 +7,9 @@ conda activate diploma3
 
 python pmobiact1.py
 python psisfall1.py
-python shorizontal.py
-python svertical.py
+
+python f1vertical.py
+python f2horizontal.py
 
 python S1zambia4A.py
 python S2second2.py
@@ -50,6 +51,7 @@ https://realpython.com/python-ai-neural-network/
 
 pip install tensorflow_datasets
 pip install shap
+pip install lazypredict
 ```
 ============================================================20
 ## 3 - Deep-Learning algorithm

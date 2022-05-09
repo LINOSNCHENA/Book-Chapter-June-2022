@@ -7,15 +7,21 @@ import matplotlib.pyplot as plt
 input_vector = np.array([1.66, 1.56])
 weights_1 = np.array([1.45, -0.66])
 bias = np.array([0.0])
+
+
 def sigmoid(x):
-   return 1 / (1 + np.exp(-x))
+    return 1 / (1 + np.exp(-x))
+
+
 def make_prediction(input_vector, weights, bias):
-         layer_1 = np.dot(input_vector, weights) + bias
-         layer_2 = sigmoid(layer_1)
-         return layer_2
+    layer_1 = np.dot(input_vector, weights) + bias
+    layer_2 = sigmoid(layer_1)
+    return layer_2
+
+
 prediction = make_prediction(input_vector, weights_1, bias)
 print(f"The prediction result is: {prediction}")
-#The prediction result is: [0.7985731]
+# The prediction result is: [0.7985731]
 target = 0
 mse = np.square(prediction - target)
 print(f"Prediction: {prediction}; Error: {mse}")
@@ -25,6 +31,7 @@ print(f"The derivative is {derivative}")
 # The derivative is: [1.7420383]
 print('======================================================|Derivative|=====================================================')
 # Creating the Neural Network Class
+
 
 class NeuralNetwork:
     # ...
@@ -44,11 +51,13 @@ class NeuralNetwork:
         layer_2 = self._sigmoid(layer_1)
         prediction = layer_2
         return prediction
+
     def _update_parameters(self, derror_dbias, derror_dweights):
         self.bias = self.bias - (derror_dbias * self.learning_rate)
         self.weights = self.weights - (
             derror_dweights * self.learning_rate
         )
+
     def _compute_gradients(self, input_vector, target):
         layer_1 = np.dot(input_vector, self.weights) + self.bias
         layer_2 = self._sigmoid(layer_1)
@@ -66,7 +75,8 @@ class NeuralNetwork:
             derror_dprediction * dprediction_dlayer1 * dlayer1_dweights
         )
 
-        return derror_dbias, derror_dweights       
+        return derror_dbias, derror_dweights
+
     def train(self, input_vectors, targets, iterations):
         cumulative_errors = []
         for current_iteration in range(iterations):
@@ -98,6 +108,7 @@ class NeuralNetwork:
                 cumulative_errors.append(cumulative_error)
 
         return cumulative_errors
+
 
 class NeuralNetwork1:
     def __init__(self, learning_rate):
@@ -141,18 +152,20 @@ class NeuralNetwork1:
         self.weights = self.weights - (
             derror_dweights * self.learning_rate
         )
+
+
 input_vectors = np.array(
-     [
-         [3, 1.5],
-         [2, 1],
-         [4, 1.5],
-         [3, 4],
-         [3.5, 0.5],
-         [2, 0.5],
-         [5.5, 1],
-         [1, 1],
-     ]
- )
+    [
+        [3, 1.5],
+        [2, 1],
+        [4, 1.5],
+        [3, 4],
+        [3.5, 0.5],
+        [2, 0.5],
+        [5.5, 1],
+        [1, 1],
+    ]
+)
 
 targets = np.array([0, 1, 0, 1, 0, 1, 1, 0])
 print("========================================90====================================")
@@ -165,7 +178,7 @@ plt.plot(training_error)
 plt.xlabel("Iterations")
 plt.ylabel("Error for all training instances")
 # plt.show()
-plt.suptitle('=========ANN-Manuaul design-ERRORS INVOVED IN TRAINING============')
+plt.suptitle('4a.=ANN-Manuaul design-ERRORS INVOVED IN TRAINING==')
 plt.savefig("4_AI_manual.png")
 plt.savefig('../UXviews/table4/T4.png')
 plt.show()
