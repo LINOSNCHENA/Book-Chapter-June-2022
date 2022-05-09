@@ -63,6 +63,10 @@ python keras2.py
 python kmodel3.py
 python nnet4.py
 
+conda create -n diploma4
+conda install -c conda-forge tensorflow
+pip install tensorflow_datasets
+
 ============================================================30
 ```
 
