@@ -116,7 +116,7 @@ train.drop('ActivityName', axis=1, inplace=True)
 train.drop('subject', axis=1, inplace=True)
 
 train.to_csv('./../5DataXYZ/ucihar1.csv', header=1, index=0)
-test.to_csv('./../5dataXYZ/ucihart2.csv', header=1, index=0)
+test.to_csv('./../5dataXYZ/ucihart1.csv', header=1, index=0)
 print(train.head(4))
 
 print('===============================|11_REMOVE_WORDS_AND_HEADERS|==================================10===============')
@@ -125,7 +125,11 @@ df = train.loc[train['Activity'].isin([0.0])]
 print(df.shape)
 print(train.shape)
 print(train)
-train.to_csv('./../5DataXYZ/ucihar1.csv', header=1, index=0)
-test.to_csv('./../5DataXYZ/ucihar2.csv', header=1, index=0)
+train.to_csv('./../5DataXYZ/ucihar2.csv', header=1, index=0)
+test.to_csv('./../5DataXYZ/ucihart2.csv', header=1, index=0)
+
+print(train)
+train.to_csv('./../5DataXYZ/ucihar3.csv', header=0, index=0)
+test.to_csv('./../5DataXYZ/ucihart3.csv', header=0, index=0)
 
 print('==================================|First_Successfully_Completed|===============================11===============')
