@@ -2,6 +2,7 @@
 
 ```
 conda activate diploma3
+conda activate diploma4
 ===========================================================01
 10: MobiAct and Sisfall Data
 
@@ -66,6 +67,9 @@ python nnet4.py
 conda create -n diploma4
 conda install -c conda-forge tensorflow
 pip install tensorflow_datasets
+conda install -c conda-forge matplotlib
+conda install -c anaconda pandas
+pip install Jinja2
 
 ============================================================30
 ```

@@ -172,12 +172,12 @@ for metric in metrics:
     ax22.plot(training.history['val_'+metric], label=metric)    
     ax22.set_ylabel("Score", color="steelblue")    
 #plt.show()
-plt.suptitle("========tile3================")
+plt.suptitle("========tile3=====175===========")
 plt.savefig("3A_AI_manual.png")
 plt.savefig('../UXviews/table4/T3.png')
 plt.show()
 
-print('===========================Threee==========================================')
+print('===========================Threee====180======================================')
 '''
 Use shap to build an a explainer.
 :parameter
@@ -190,19 +190,25 @@ Use shap to build an a explainer.
 :return
     dtf with explanations
 '''
+
+print("xxxxxxxxxxxx194xxxxxxxxxx")
 def explainer_shap(model, X_names, X_instance, X_train=None, task="classification", top=10):
     ## create explainer
     ### machine learning
+    print("xxxxxxxxxxxxxxxxxxxxxx----------198")
     if X_train is None:
         explainer = shap.TreeExplainer(model)
         shap_values = explainer.shap_values(X_instance)
     ### deep learning
+    ##print("xxxxxxxxxxxxxxxxxxxxxx")
     else:
         explainer = shap.DeepExplainer(model, data=X_train[:100])
         shap_values = explainer.shap_values(X_instance.reshape(1,-1))[0].reshape(-1)
 
+    print("xxxxxxxxxxxxxxxxxxxxxx----208")
     ## plot
     ### classification
+    print("xxxxxxxxxxxxxxxxxxxxxx")
     if task == "classification":
         shap.decision_plot(explainer.expected_value, shap_values, link='logit', feature_order='importance',
                            features=X_instance, feature_names=X_names, feature_display_range=slice(-1,-top-1,-1))
