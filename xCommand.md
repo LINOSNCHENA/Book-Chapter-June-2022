@@ -1,7 +1,6 @@
 ## TWO FALL-DETECTION AND ONE HAR APPLICATIONS
 
 ```
-conda activate diploma3
 conda activate diploma4
 ===========================================================01
 10: MobiAct and Sisfall Data
@@ -63,6 +62,9 @@ python keras1.py
 python keras2.py
 python kmodel3.py
 python nnet4.py
+python score4.py
+
+python xx1c.py
 
 conda create -n diploma4
 conda install -c conda-forge tensorflow

@@ -14,7 +14,8 @@ n_features = 10
 seed = 1
 numpy.random.seed(seed)
 batch_size = 1
-epochs = 31
+epochs = 50
+plotName="Deep-Learning-MobiAct-dataset "
 
 model = models.Sequential(name="DeepNN", layers=[
     # hidden layer 1
@@ -115,6 +116,7 @@ ax.set_facecolor("beige")
 plt.plot(history.history['acc'], color="blue")
 plt.plot(history.history['val_acc'], color="red")
 plt.title('11.A1-Sequential2021_Data | Model-Accuracy-2.1', fontsize=fontSized)
+plt.title(str(plotName)+' | Model-Accuracy', fontsize=fontSized)
 plt.ylabel('Accuracy values', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 # plt.axis([0, epochs, 0.0, 1.1])
@@ -136,6 +138,7 @@ ax.set_facecolor("beige")
 plt.plot(history.history['loss'], color="fuchsia")
 plt.plot(history.history['val_loss'], color="blue")
 plt.title('12.B2-Sequential2021_Data | Model-Loss-2.2', fontsize=fontSized)
+plt.title(str(plotName)+' | Model-Loss', fontsize=fontSized)
 plt.ylabel('Loss values', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 plt.grid(True)
@@ -158,6 +161,7 @@ ax.set_facecolor("beige")
 plt.plot(history.history['mean_squared_error'], color="blue")
 plt.plot(history.history['val_mean_squared_error'], color="fuchsia")
 plt.title('13-Sequential2021_Data | Model-Error-2.3', fontsize=fontSized)
+plt.title(str(plotName)+' | Model-Error', fontsize=fontSized)
 plt.ylabel('Error values', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 # plt.axis([0, epochs, 0, 0.99])
@@ -174,4 +178,4 @@ print(end - start, '- seconds\n')
 print((end - start)/60, '- minutes\n')
 
 
-print("\n ===============|2_MOBIACT_ibeacon_Successfully_Completed|===================|firstXX1|==============|AAA|==========")
+print("\n ===============|2_MOBIACT_Successfully_Completed|===================|secondXX1|==============|BBB|==========")
