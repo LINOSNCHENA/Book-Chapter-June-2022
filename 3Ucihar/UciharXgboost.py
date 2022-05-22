@@ -1,6 +1,5 @@
 from sklearn.model_selection import cross_val_score, KFold
 from sklearn.model_selection import train_test_split
-# from DecisionTreeClassifier  # 3
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from matplotlib import pyplot as plt
@@ -8,7 +7,6 @@ import seaborn as sn
 import pandas as pd
 import xgboost as xgb
 import xgboost
-#from sklearn import tree
 import pickle
 import warnings
 warnings.simplefilter('ignore')
@@ -115,16 +113,6 @@ y_pred = model.predict(test_X)
 
 # Confusion Matrix
 print("====================================|Confussion_Matrix|=================================7============")
-# plt.rc('axes', titlesize=22)
-# plt.rc('font', size=25)
-# plt.rc('axes', labelsize=18)  # fontsize of the x and y labels
-# plt.rc('xtick', labelsize=18)  # fontsize of the x tick labels
-# plt.rc('ytick', labelsize=18)  # fontsize of the y tick labels
-# plt.rc('legend', fontsize=15)  # fontsize of the legend
-# plt.rcParams['figure.figsize'] = [10, 10]
-# plt.rcParams["figure.autolayout"] = True
-# #plt.imshow(X, aspect='auto')
-
 print(test_Y.shape)
 print(y_pred.shape)
 array = confusion_matrix(y_pred,test_Y)

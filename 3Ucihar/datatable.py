@@ -7,7 +7,8 @@ pd.options.display.precision = 7
 zed =22
 
 print("=================================|Select_DataFrame_Source|========================1==============")
-df1 = pd.read_csv("./../5dataXYZ/ucihar4x.csv")  
+
+df1 = pd.read_csv("./../6dataXYZ/ucihar4x.csv")  
 df1 = pd.DataFrame(df1)
 pd.set_option('max_colwidth', 9)
 plt.rcParams["figure.figsize"] = [7.00, 4.50]

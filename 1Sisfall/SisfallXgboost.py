@@ -7,23 +7,22 @@ import seaborn as sn
 import pandas as pd
 import xgboost as xgb
 import xgboost
-#from sklearn import tree
 import pickle
 import warnings
 warnings.simplefilter('ignore')
 epochs = 2022
 size = 15
-plt.rc('axes', titlesize=20) 
-plt.rc('font', size=15) 
-plt.rc('axes', labelsize=12) #fontsize of the x and y labels
-plt.rc('xtick', labelsize=12) #fontsize of the x tick labels
-plt.rc('ytick', labelsize=12) #fontsize of the y tick labels
-plt.rc('legend', fontsize=10) #fontsize of the legend
+plt.rc('axes', titlesize=20)
+plt.rc('font', size=15)
+plt.rc('axes', labelsize=12)  # fontsize of the x and y labels
+plt.rc('xtick', labelsize=12)  # fontsize of the x tick labels
+plt.rc('ytick', labelsize=12)  # fontsize of the y tick labels
+plt.rc('legend', fontsize=10)  # fontsize of the legend
 plt.rcParams['figure.figsize'] = [15, 10]
 plt.rcParams["figure.autolayout"] = True
 print("==================================|Dataset_Used|====================================1============")
 
-datasetName = './../5dataXYZ/YSis1ALLS.csv'
+datasetName = './../6dataXYZ/YSis1ALLS.csv'
 df2 = pd.read_csv(datasetName, header=1, delimiter=",")
 print(df2.head(5))
 print(df2.shape)
@@ -107,23 +106,13 @@ y_pred = model.predict(test_X)
 
 # Confusion Matrix
 print("====================================|Confussion_Matrix|=================================7============")
-
-# plt.rc('axes', titlesize=22) 
-# plt.rc('font', size=25) 
-# plt.rc('axes', labelsize=18) #fontsize of the x and y labels
-# plt.rc('xtick', labelsize=18) #fontsize of the x tick labels
-# plt.rc('ytick', labelsize=18) #fontsize of the y tick labels
-# plt.rc('legend', fontsize=15) #fontsize of the legend
-# plt.rcParams['figure.figsize'] = [10, 10]
-# plt.rcParams["figure.autolayout"] = True
-
 print(test_Y.shape)
 print(y_pred.shape)
 array = confusion_matrix(test_Y, y_pred)
 print(array.shape)
 print(array.shape)
-df = pd.DataFrame(array, index=['ADLs','FALL'], columns=[
-                  'ADLs','FALL' ])
+df = pd.DataFrame(array, index=['ADLs', 'FALL'], columns=[
+                  'ADLs', 'FALL'])
 plt.figure(figsize=(12, 6))
 sn.heatmap(df, annot=True, cmap='Greens', fmt='g')
 plt.xlabel('Predicted')
@@ -134,12 +123,12 @@ plt.tight_layout()
 plt.savefig('../UXviews/83A2.png')
 plt.savefig('../UXviews/ONE/83A2.png')
 plt.show()
-plt.rc('axes', titlesize=20) 
-plt.rc('font', size=15) 
-plt.rc('axes', labelsize=12) #fontsize of the x and y labels
-plt.rc('xtick', labelsize=12) #fontsize of the x tick labels
-plt.rc('ytick', labelsize=12) #fontsize of the y tick labels
-plt.rc('legend', fontsize=10) #fontsize of the legend
+plt.rc('axes', titlesize=20)
+plt.rc('font', size=15)
+plt.rc('axes', labelsize=12)  # fontsize of the x and y labels
+plt.rc('xtick', labelsize=12)  # fontsize of the x tick labels
+plt.rc('ytick', labelsize=12)  # fontsize of the y tick labels
+plt.rc('legend', fontsize=10)  # fontsize of the legend
 plt.rcParams['figure.figsize'] = [15, 10]
 plt.rcParams["figure.autolayout"] = True
 print("======================================|Three_Plots|=====================================8============")
@@ -151,15 +140,17 @@ x_axis = range(0, epochs)
 
 print(results)
 print("==================|XXX333333bbbbb333333XX|========================")
-a1 = round(results['validation_0']['auc'][2],4)
-a2 = round(results['validation_1']['auc'][2],4)
+a1 = round(results['validation_0']['auc'][2], 4)
+a2 = round(results['validation_1']['auc'][2], 4)
 # print(a1)
 # print(a2)
 
 # plot classification auc
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(x_axis, results['validation_0']['auc'], label='Train-%'+str(round(a1*100,4)))
-ax.plot(x_axis, results['validation_1']['auc'], label='Test- %'+str(round(a2*100,4)))
+ax.plot(x_axis, results['validation_0']['auc'],
+        label='Train-%'+str(round(a1*100, 4)))
+ax.plot(x_axis, results['validation_1']['auc'],
+        label='Test- %'+str(round(a2*100, 4)))
 ax.legend(fontsize=size, loc="best")
 plt.ylabel('AUC-Classification')
 # plt.axis([0, epochs, 0.0000, 1.2000])
@@ -172,11 +163,13 @@ plt.savefig('../UXviews/ONE/83A3.png')
 plt.show()
 
 # plot log loss
-a1 = round(results['validation_0']['logloss'][2],4)
-a2 = round(results['validation_1']['logloss'][2],4)
+a1 = round(results['validation_0']['logloss'][2], 4)
+a2 = round(results['validation_1']['logloss'][2], 4)
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(x_axis, results['validation_0']['logloss'], label='Train-%'+str(round(a1*100,4)))
-ax.plot(x_axis, results['validation_1']['logloss'], label='Test- %'+str(round(a2*100,4)))
+ax.plot(x_axis, results['validation_0']['logloss'],
+        label='Train-%'+str(round(a1*100, 4)))
+ax.plot(x_axis, results['validation_1']['logloss'],
+        label='Test- %'+str(round(a2*100, 4)))
 ax.legend(fontsize=size, loc="best")
 plt.ylabel('Log Loss')
 #plt.axis([0, epochs, 0.0, 1.1])
@@ -189,11 +182,13 @@ plt.savefig('../UXviews/ONE/83A4.png')
 plt.show()
 
 # plot classification error
-a1 = round(results['validation_0']['error'][2],4)
-a2 = round(results['validation_1']['error'][2],4)
+a1 = round(results['validation_0']['error'][2], 4)
+a2 = round(results['validation_1']['error'][2], 4)
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(x_axis, results['validation_0']['error'], label='Train- %'+str(round(a1*100,4)))
-ax.plot(x_axis, results['validation_1']['error'], label='Test-  %'+str(round(a2*100,4)))
+ax.plot(x_axis, results['validation_0']['error'],
+        label='Train- %'+str(round(a1*100, 4)))
+ax.plot(x_axis, results['validation_1']['error'],
+        label='Test-  %'+str(round(a2*100, 4)))
 ax.legend(fontsize=size, loc="best")
 plt.ylabel('Classification Error')
 plt.title('8.35-XGBoost Classification Error | '+datasetName)

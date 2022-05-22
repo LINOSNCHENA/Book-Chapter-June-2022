@@ -27,7 +27,7 @@ plt.rcParams["figure.autolayout"] = True
 
 print("==================================|Dataset_Used|====================================1============")
 
-datasetName = './../5dataXYZ/XMobiAct6.csv'
+datasetName = './../6dataXYZ/XMobiAct6.csv'
 df2 = pd.read_csv(datasetName, header=1, delimiter=",")
 # print(df2.head(5))
 
@@ -115,15 +115,6 @@ y_pred = model.predict(test_X)
 
 # Confusion Matrix
 print("====================================|Confussion_Matrix|=================================7============")
-# plt.rc('axes', titlesize=22) 
-# plt.rc('font', size=25) 
-# plt.rc('axes', labelsize=18) #fontsize of the x and y labels
-# plt.rc('xtick', labelsize=18) #fontsize of the x tick labels
-# plt.rc('ytick', labelsize=18) #fontsize of the y tick labels
-# plt.rc('legend', fontsize=15) #fontsize of the legend
-# plt.rcParams['figure.figsize'] = [10, 10]
-# plt.rcParams["figure.autolayout"] = True
-
 print(test_Y.shape)
 print(y_pred.shape)
 array = confusion_matrix(test_Y, y_pred)

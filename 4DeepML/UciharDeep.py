@@ -57,7 +57,7 @@ outputs = layers.Dense(name="output", units=1, activation='sigmoid')(h2)
 model = models.Model(inputs=inputs, outputs=outputs, name="DeepNN")
 # fix random seed for reproducibility
 print("=========================================|MOBIACT_DATASET|=======================1==============")
-dataset = np.loadtxt('./../5dataXYZ/ucihar3.csv', delimiter=",")
+dataset = np.loadtxt('./../6dataXYZ/ucihar3.csv', delimiter=",")
 Y = dataset[:, 0:1]
 X = dataset[:, 0:10]
 print(X.shape)
