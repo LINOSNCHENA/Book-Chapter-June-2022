@@ -3,19 +3,32 @@
 ```
 conda activate diploma4
 ===========================================================01
-10: MobiAct and Sisfall Data
+10: Generate data: MobiAct and Sisfall Data
 
-python pmobiact1.py
-python psisfall1.py
+python SisfallMakeData.py
+python MobiactMakeData.py
+python UciharMakeData.py
+python dataTable.py
+===========================================================02
+
+python SisfallDeepLean.py
+python MobiActDeepLean.py
+python UciharDeepLean.py
+
+===========================================================03
+python SisfallxGboost.py
+python MobiActxGboost.py
+python UciharxGboost.py
+
+===========================================================03
 
 python f1vertical.py
 python f2horizontal.py
-
+===========================================================05
 python S1zambia4A.py
 python S2second2.py
 python S3zambia4B.py
 python S4zambia4C.py
-
 
 python zamb1.py
 python zamb2.py
@@ -30,14 +43,6 @@ Method xgboost
 python zambia3A.py
 python zambia3B.py
 python zambia3C.py
-============================================================20
-```
-## 2 - UCI-HAR algorithm
-```
-python dataTable.py
-python uciharData.py
-
-conda activate diploma3
 
 ============================================================30
 ```
