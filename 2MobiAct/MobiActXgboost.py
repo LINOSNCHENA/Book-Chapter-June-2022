@@ -27,7 +27,7 @@ plt.rcParams["figure.autolayout"] = True
 
 print("==================================|Dataset_Used|====================================1============")
 
-datasetName = './XYZ/XMobiAct6.csv'
+datasetName = './../5dataXYZ/XMobiAct6.csv'
 df2 = pd.read_csv(datasetName, header=1, delimiter=",")
 # print(df2.head(5))
 
@@ -106,7 +106,7 @@ plt.title('XGBoost Features(18) Importance | '+datasetName)
 plt.grid(True)
 plt.tight_layout()
 plt.savefig('../UXviews/83B1.png')
-plt.savefig('../UXviews/EIGHT/83B1.png')
+plt.savefig('../UXviews/TWO/83B1.png')
 plt.show()
 # Predict the trading signal on test datset
 y_pred = model.predict(test_X)
@@ -139,7 +139,7 @@ plt.suptitle('XGBoost Confusion Matrix of Test Dataset | '+datasetName)
 plt.suptitle('Confusion matrix - MobiAct dataset')
 plt.tight_layout()
 plt.savefig('../UXviews/83B2.png')
-plt.savefig('../UXviews/EIGHT/83B2.png')
+plt.savefig('../UXviews/TWO/83B2.png')
 plt.show()
 plt.rc('axes', titlesize=20) 
 plt.rc('font', size=15) 
@@ -173,7 +173,7 @@ plt.title('XGBoost Area Under The Curve(AUC) Accuracy | '+datasetName)
 plt.grid()
 plt.tight_layout()
 plt.savefig('../UXviews/83B3.png')
-plt.savefig('../UXviews/EIGHT/83B3.png')
+plt.savefig('../UXviews/TWO/83B3.png')
 plt.show()
 
 # plot log loss
@@ -189,7 +189,7 @@ plt.title('XGBoost Classification LogLoss | '+datasetName)
 plt.grid()
 plt.tight_layout()
 plt.savefig('../UXviews/83B4.png')
-plt.savefig('../UXviews/EIGHT/83B4.png')
+plt.savefig('../UXviews/TWO/83B4.png')
 plt.show()
 
 # plot classification error
@@ -205,7 +205,7 @@ plt.title('XGBoost Classification Error | '+datasetName)
 plt.grid()
 plt.tight_layout()
 plt.savefig('../UXviews/83B5.png')
-plt.savefig('../UXviews/EIGHT/83B5.png')
+plt.savefig('../UXviews/TWO/83B5.png')
 plt.show()
 
 
@@ -221,7 +221,7 @@ print("=====================================|DescisionTreeClassiferMAP|=========
 # plt.tight_layout()
 # plt.tight_layout()
 # plt.savefig('../UXviews/83B6.png')
-# plt.savefig('../UXviews/EIGHT/83B6.png')
+# plt.savefig('../UXviews/TWO/83B6.png')
 # plt.show()
 
 print("==============================|Successfully_Completed!|========================|THREE|=====|BBB|==================")

@@ -25,7 +25,7 @@ plt.rcParams["figure.autolayout"] = True
 
 print("==================================|Dataset_Used|====================================1============")
 
-datasetName = './XYZ/ucihar1.csv'
+datasetName = './../5dataXYZ/ucihar1.csv'
 df2 = pd.read_csv(datasetName, header=0, delimiter=",")
 print(df2.head(5))
 

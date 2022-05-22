@@ -11,7 +11,7 @@ tf.compat.v1.disable_v2_behavior()
 seed = 1
 numpy.random.seed(seed)
 batch_size = 1
-epochs = 50
+epochs = 150
 fontSized = 22
 size = 15
 start = time.time()

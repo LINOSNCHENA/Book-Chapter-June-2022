@@ -14,7 +14,7 @@ n_features = 10
 seed = 1
 numpy.random.seed(seed)
 batch_size = 1
-epochs = 50
+epochs = 150
 plotName="Deep-Learning-MobiAct-dataset "
 
 model = models.Sequential(name="DeepNN", layers=[
