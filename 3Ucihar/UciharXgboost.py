@@ -246,4 +246,4 @@ print("=====================================|DescisionTreeClassiferMAP|=========
 # plt.savefig('../UXviews/THREE/83C6.png')
 # plt.show()
 
-print("==============================|Successfully_Completed!|========================|THREE_CC|=====|CCC|==================")
+print("=============================|Ucihar_Successfully_Completed!|===================|XGBoost|===================")

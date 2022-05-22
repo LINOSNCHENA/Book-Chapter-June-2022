@@ -8,14 +8,9 @@ import pandas as pd
 plt.rcParams["figure.figsize"] = [18.50, 5.50]
 plt.rcParams["figure.autolayout"] = True
 print("===================================|ORIGINAL|================================1=============")
-
-# df1 = pd.read_csv("ACCURACYSISFALL.csv", header=1,)
-# df2 = pd.read_csv("ACCURACYMOBIACT.csv", header=1,)
-# df3 = pd.read_csv("ACCURACYUCIHAR.csv", header=1,)
-
-df3 = pd.read_csv("./../5dataxyz/ucihar1.csv", header=1,)
-df2 = pd.read_csv("./../5dataxyz/XMOBIACT1.csv", header=1,)
-df1 = pd.read_csv("./../5dataxyz/ySIS1alls.csv", header=1,)
+df3 = pd.read_csv("./../6dataxyz/ucihar1.csv", header=1,)
+df2 = pd.read_csv("./../6dataxyz/XMOBIACT1.csv", header=1,)
+df1 = pd.read_csv("./../6dataxyz/ySIS1alls.csv", header=1,)
 
 print('=================1======')
 print(df1.head(5))
@@ -88,8 +83,7 @@ tabla.scale(1.2, 1.2)  # change size table
 plt.grid(True)
 plt.title('1-ACCURACY-HORIZONTAL')
 plt.tight_layout()
-plt.savefig('../UXVIEWS/ACC/ACC1.png', dpi=99, bbox_inches='tight')
-plt.savefig('../UXVIEWS/ACC/ACC4.png', dpi=99, bbox_inches='tight')
+plt.savefig('../UXVIEWS/ACC/H1.png', dpi=99, bbox_inches='tight')
 plt.show()
 
 print("===================================|Plotting_SECOND|============================4=============")
@@ -116,7 +110,7 @@ tabla.auto_set_font_size(False)  # Activate set fontsize manually
 tabla.set_fontsize(12)  # if ++fontsize is necessary ++colWidths
 tabla.scale(1.2, 1.2)  # change size table
 plt.title('2-ACCURACY-VERTICAL')
-plt.savefig('../UXVIEWS/ACC/ACC2.png', dpi=99, bbox_inches='tight',transparent=True)
+plt.savefig('../UXVIEWS/ACC/H2.png', dpi=99, bbox_inches='tight',transparent=True)
 plt.show()
 
 print("===================================|Plotting_THIRD|============================5=============")
@@ -144,7 +138,7 @@ tabla.auto_set_font_size(False)  # Activate set fontsize manually
 tabla.set_fontsize(12)  # if ++fontsize is necessary ++colWidths
 tabla.scale(1.2, 1.2)  # change size table
 plt.title('3-ACCURACY-SECOND VERTICAL')
-plt.savefig('../UXVIEWS/ACC/ACC3.png',dpi=99, bbox_inches='tight', transparent=True)
+plt.savefig('../UXVIEWS/ACC/H3.png',dpi=99, bbox_inches='tight', transparent=True)
 plt.show()
 
-print("===================================|s2_s2_completed_Successufly|=====================7===========")
+print("===================================|s2_s2_completed_Successufly|=====================|HORIZONTAL|===========")

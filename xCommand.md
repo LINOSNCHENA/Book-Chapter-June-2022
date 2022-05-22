@@ -13,12 +13,12 @@ python SisfallxGboost.py
 python MobiActxGboost.py
 python UciharxGboost.py
 ===========================================================03
-python xx1A.py
-python xx1B.py
-python xx1C.py
+python Sisfalldeep.py
+python MobiActDeep.py
+python UciharDeep.py
 ===========================================================04
-python f1vertical.py
-python f2horizontal.py
+python Vertical.py
+python Horizontal.py
 ===========================================================05
 ```
 
@@ -32,13 +32,15 @@ https://realpython.com/python-ai-neural-network/
 ## 3 - Deep-Learning algorithm
 ```
 conda install -c conda-forge tensorflow
-pip install tensorflow_datasets
 conda install -c conda-forge matplotlib
+conda install -c conda-forge opencv
 conda install -c anaconda pandas
-pip install Jinja2
+
 pip install tensorflow_datasets
-pip install shap
 pip install lazypredict
+pip install Jinja2
+pip install shap
+
 =========================================================06
 ```
 

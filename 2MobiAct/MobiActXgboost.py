@@ -224,4 +224,4 @@ print("=====================================|DescisionTreeClassiferMAP|=========
 # plt.savefig('../UXviews/TWO/83B6.png')
 # plt.show()
 
-print("==============================|Successfully_Completed!|========================|THREE|=====|BBB|==================")
+print("==============================|MobiAct_Successfully_Completed!|========================|XGBoost|=====================")
