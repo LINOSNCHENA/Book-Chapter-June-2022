@@ -75,7 +75,7 @@ print(history.history.keys())
 scores = model.evaluate(X, Y, verbose=0)
 print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
 # serialize model to JSON
-plot_model(model, to_file='../UXViews/image4/B1.png',
+plot_model(model, to_file='../UXViews/deeplean/B1.png',
            show_shapes=True, show_layer_names=True)
 print("=============================================11================================4===============")
 print(model.metrics_names)
@@ -123,7 +123,7 @@ plt.xlabel('epoch', fontsize=fontSized)
 plt.legend(['train1,         : %'+str(accArray1),
            'validation1, : %'+str(accArray12)], loc='best', fontsize=size,)
 plt.savefig('../UXviews/B2.png')
-plt.savefig('../UXviews/image4/B2.png')
+plt.savefig('../UXviews/deeplean/B2.png')
 plt.show()
 
 
@@ -146,7 +146,7 @@ plt.grid(True)
 plt.legend(['train2,        :%'+str(accArray2),
            'validation2, : %'+str(accArray22)], loc='best', fontsize=size,)
 plt.savefig('../UXviews/83.png')
-plt.savefig('../UXviews/image4/B3.png')
+plt.savefig('../UXviews/deeplean/B3.png')
 plt.show()
 
 
@@ -168,7 +168,7 @@ plt.xlabel('epoch', fontsize=fontSized)
 plt.legend(['train3,         :%'+str(accArray3),
            'validation3, : %'+str(accArray32)], loc='best', fontsize=size,)
 plt.savefig('../UXviews/B4.png')
-plt.savefig('../UXviews/image4/B4.png')
+plt.savefig('../UXviews/deeplean/B4.png')
 plt.show()
 
 print("\n ===============================|Period of Execution|====================10============\n")
