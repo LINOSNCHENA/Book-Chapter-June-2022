@@ -7,7 +7,7 @@ from keras.utils.vis_utils import plot_model
 import shap
 import tensorflow as tf
 tf.compat.v1.disable_v2_behavior()
-fontSized = 22
+fontSized = 15
 size = 15
 start = time.time()
 n_features = 10

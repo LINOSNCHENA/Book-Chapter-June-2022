@@ -17,8 +17,8 @@ python Sisfalldeep.py
 python MobiActDeep.py
 python UciharDeep.py
 ===========================================================04
-python Vertical.py
-python Horizontal.py
+python x1Vertical.py
+python x2Horizontal.py
 ===========================================================05
 ```
 

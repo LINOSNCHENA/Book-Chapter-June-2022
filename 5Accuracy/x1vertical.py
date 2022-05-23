@@ -51,7 +51,7 @@ names = []
 scoring = 'accuracy'
 seed = 10
 
-print("============================================================13===============")
+print("=========================|Model|============================================")
 for name, model in models:
     kfold = model_selection.KFold(n_splits=10, shuffle=True, random_state=seed)
     cv_results = model_selection.cross_val_score(
@@ -67,8 +67,7 @@ cols_swap1x = results[0][1].round(10)
 cols_swap1z = results[0][2].round(10)
 print(cols_swap1, cols_swap1x, cols_swap1z)
 
-
-print("======================|Decimal|============================14================")
+print("======================|Make-Decimal|============================================")
 cols_swap1 = results[0].round(10)
 cols_swap2 = results[1].round(10)
 cols_swap3 = results[2].round(10)
@@ -88,7 +87,7 @@ df1.insert(7, 'Acc8_XG_SISFALL', cols_swap8, True)
 print(df1)
 df1.to_csv(r'ACC/ACCURACYSISFALL.csv', index=0)
 
-print("===========================================================15===============")
+print("========================|Testing|==================================================")
 fig = plt.figure(figsize=(16, 8))
 fig.suptitle('1-Algorithm Comparison')
 ax = fig.add_subplot(111)
@@ -155,7 +154,7 @@ cols_swap1x = results[0][1].round(10)
 cols_swap1z = results[0][2].round(10)
 print(cols_swap1, cols_swap1x, cols_swap1z)
 
-print("==========================|Decimal|=======================23================")
+print("==========================|Make-Decimal|=======================================")
 cols_swap1 = results[0].round(10)
 cols_swap2 = results[1].round(10)
 cols_swap3 = results[2].round(10)
@@ -175,7 +174,7 @@ df1.insert(7, 'Acc8_XG_MOBIACT', cols_swap8, True)
 print(df1)
 df1.to_csv(r'ACC/ACCURACYMOBIACT.csv', index=0)
 
-print("===========================================================15===============")
+print("==============================|Testing|============================================")
 fig = plt.figure(figsize=(16, 8))
 fig.suptitle('1-Algorithm Comparison')
 ax = fig.add_subplot(111)
@@ -208,7 +207,6 @@ X = array[:, 1:19]
 Y = array[:, 0:1]
 
 # prepare configuration for cross validation test harness
-print("========================================================32=================")
 seed = 7
 print(X.shape)
 print(Y.shape)
@@ -230,7 +228,7 @@ names = []
 scoring = 'accuracy'
 seed = 10
 
-print("=======================================================33=================")
+print("======================|Model|===============================================")
 for name, model in models:
     kfold = model_selection.KFold(n_splits=10, shuffle=True, random_state=seed)
     cv_results = model_selection.cross_val_score(
@@ -246,7 +244,7 @@ cols_swap1x = results[0][1].round(10)
 cols_swap1z = results[0][2].round(10)
 print(cols_swap1, cols_swap1x, cols_swap1z)
 
-print("====================|Decimal|===========================34================")
+print("====================|Make-Decimal|==========================================")
 cols_swap1 = results[0].round(10)
 cols_swap2 = results[1].round(10)
 cols_swap3 = results[2].round(10)
@@ -267,7 +265,7 @@ df1.insert(7, 'Acc8_XG_UCIHAR', cols_swap8, True)
 print(df1)
 df1.to_csv(r'ACC/ACCURACYUCIHAR.csv', index=0)
 
-print("===========================================================15===============")
+print("===========================|Testing|========================================")
 fig = plt.figure(figsize=(16, 8))
 fig.suptitle('1-Algorithm Comparison')
 ax = fig.add_subplot(111)

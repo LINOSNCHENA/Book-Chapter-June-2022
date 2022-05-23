@@ -12,7 +12,7 @@ seed = 1
 numpy.random.seed(seed)
 batch_size = 1
 epochs = 150
-fontSized = 22
+fontSized = 15
 size = 15
 start = time.time()
 n_features = 10

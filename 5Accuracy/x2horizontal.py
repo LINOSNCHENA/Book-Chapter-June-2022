@@ -4,7 +4,6 @@ from pandas.plotting import table
 import numpy as np
 from matplotlib import pyplot as plt
 import pandas as pd
-
 plt.rcParams["figure.figsize"] = [18.50, 5.50]
 plt.rcParams["figure.autolayout"] = True
 print("===================================|ORIGINAL|================================1=============")
@@ -32,7 +31,7 @@ df4.to_csv(r'ACC/ACCURACYALL_Horizontal.csv', index=0)
 df5 = pd.DataFrame(df5)
 df5.to_csv(r'ACC/ACCURACYALL_Vertical.csv', index=0)
 
-print("===================================|Plotting_FIRST|===========================3=============")
+print("===================================|Plotting_FIRST|===========================2=============")
 
 df = pd.DataFrame(df4)
 # df.index = ['0001', '0002', '0003']
@@ -59,7 +58,7 @@ plt.savefig('../UXVIEWS/VH1.png', dpi=99, bbox_inches='tight')
 plt.savefig('../UXVIEWS/ACC/VH1.png', dpi=99, bbox_inches='tight')
 plt.show()
 
-print("===================================|Plotting_SECOND|============================4=============")
+print("===================================|Plotting_SECOND|============================3=============")
 df = df5
 new_header = df.iloc[0]  # grab the first row for the header
 df = df[1:]  # take the data less the header row
@@ -90,7 +89,7 @@ plt.savefig('../UXVIEWS/ACC/VH2.png', dpi=99,
             bbox_inches='tight', transparent=True)
 plt.show()
 
-print("===================================|Plotting_THIRD|============================5=============")
+print("===================================|Plotting_THIRD|============================4=============")
 
 df2 = df5
 df2.index = ['ALGORITHM USED', 'LR Accuracy', 'LDA Accuracy', 'KNN Accuracy',

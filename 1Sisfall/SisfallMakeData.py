@@ -3,10 +3,9 @@ import inflect
 import numpy as np
 from matplotlib import pyplot as plt
 import pandas as pd
-sizingFont = 22
+sizingFont = 15
 
-print(
-    '====================================|Headings_six_Records_20|=======================[1]===============')
+print('======================|Headings_six_Records_20|====================[1]===============')
 
 plt.rcParams["figure.figsize"] = [18.50, 5.50]
 plt.rcParams["figure.autolayout"] = True
@@ -14,7 +13,7 @@ kalas = ['palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green', 'palegreen
          'palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green', 'palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green',
          'palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green', 'palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green']
 
-print('=======================================|SISFALL_FALL|==============================|2|=============')
+print('=================================|SISFALL_FALL|===========================|2|=============')
 names1 = ["x_acc", "y_acc", "z_acc", "x_gyr",
           "y_grc", "z_grc", 'Azimuth', 'Pitch', 'Roll']
 df10 = pd.read_table('../../MobiAct_Dataset_v2.0/SisFall_dataset/SE06/F01_SE06_R01.txt',
@@ -66,7 +65,8 @@ lx = df4['Sisfall_Label_X4']
 cols_swap = lx
 df4.insert(0, 'labelz', cols_swap, True)
 df4.drop('Sisfall_Label_X4', axis=1, inplace=True)  # Remove Colum x4
-df4.drop(df4.loc[df4['labelz'] =='labelz'].index, inplace=True)  # Remove Row z
+df4.drop(df4.loc[df4['labelz'] == 'labelz'].index,
+         inplace=True)  # Remove Row z
 df4 = pd.DataFrame(df4)
 df4.to_csv(r'./../6dataXYZ/YSis1ADLs.csv', index=0)
 
@@ -101,7 +101,8 @@ df2 = pd.DataFrame(df34)
 print(df2.shape)
 df2.to_csv(r'./../6dataXYZ/YSis1ALLS.csv', index=0)
 
-print('===========================================|Plot_Combined|=======================[5]=============')
+print(
+    '===========================================|Plot_Combined|=======================[5]=============')
 df4 = df2.iloc[11980:12001:, -15:]  # 22-Records, last-15X headers
 l = len(df4)
 c = len(df4.columns)
