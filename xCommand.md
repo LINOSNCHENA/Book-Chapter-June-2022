@@ -46,12 +46,13 @@ pip install shap
 
 ## 4. Others
 ```
+
+python compareEight.py
+
 python keras1.py
 python keras2.py
 python kmodel3.py
 python nnet4.py
-
-python score3.py
 python score4.py
 python score5.py
 

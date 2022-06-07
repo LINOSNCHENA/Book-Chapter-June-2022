@@ -1,3 +1,4 @@
+import warnings
 import numpy
 import numpy as np
 import time
@@ -7,12 +8,16 @@ from keras.utils.vis_utils import plot_model
 import shap
 import tensorflow as tf
 tf.compat.v1.disable_v2_behavior()
+warnings.simplefilter('ignore')
+plt.rcParams['figure.figsize'] = [12, 8]  # Plot-frame
+plt.rcParams["figure.autolayout"] = True
+plt.rcParams.update({'font.size': 15})  # Inside
 start = time.time()
 fontSized = 15
 n_features = 10
 seed = 1
 batch_size = 1
-epochs = 150
+epochs = 5
 numpy.random.seed(seed)
 plotName = "Deep-Learning-Ucihar-dataset "
 
@@ -116,11 +121,11 @@ plt.plot(history.history['acc'], color="blue")
 plt.plot(history.history['val_acc'], color="red")
 plt.title('11.A1-Sequential2021_Data | Model-Accuracy-2.1', fontsize=fontSized)
 plt.title(str(plotName)+' | Model-Accuracy', fontsize=fontSized)
-plt.ylabel('Accuracy values', fontsize=fontSized)
+plt.ylabel('Accuracy', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 # plt.axis([0, epochs, 0.0, 1.1])
-plt.legend(['train,         : %'+str(accArray1),
-           'validation, : %'+str(accArray12)], loc='best', fontsize=fontSized,)
+plt.legend(['training  : %'+str(accArray1),
+           'validation : %'+str(accArray12)], loc='best', fontsize=fontSized,)
 plt.savefig('../UXviews/C2.png')
 plt.savefig('../UXviews/deeplean/C2.png')
 plt.show()
@@ -142,8 +147,8 @@ plt.ylabel('Loss values', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 plt.grid(True)
 # plt.axis([0, epochs, 0, 0.99])
-plt.legend(['train,        :%'+str(accArray2),
-           'validation, : %'+str(accArray22)], loc='best', fontsize=fontSized,)
+plt.legend(['train     : %'+str(accArray2),
+           'validation : %'+str(accArray22)], loc='best', fontsize=fontSized,)
 plt.savefig('../UXviews/C3.png')
 plt.savefig('../UXviews/deeplean/C3.png')
 plt.show()
@@ -164,8 +169,8 @@ plt.title(str(plotName)+' | Model-Error', fontsize=fontSized)
 plt.ylabel('Error values', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 # plt.axis([0, epochs, 0, 0.99])
-plt.legend(['train,         :%'+str(accArray3),
-           'validation, : %'+str(accArray32)], loc='best', fontsize=fontSized,)
+plt.legend(['training  : %'+str(accArray3),
+           'validation : %'+str(accArray32)], loc='best', fontsize=fontSized,)
 plt.savefig('../UXviews/C4.png')
 plt.savefig('../UXviews/deeplean/C4.png')
 plt.show()

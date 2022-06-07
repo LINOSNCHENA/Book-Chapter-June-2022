@@ -15,8 +15,10 @@ import pandas as pd
 import numpy as np
 import time
 sizingFont = 15
-plt.rcParams.update({'font.size': 15})
 warnings.simplefilter('ignore')
+plt.rcParams['figure.figsize'] = [12, 8]  # Plot-frame
+plt.rcParams["figure.autolayout"] = True
+plt.rcParams.update({'font.size': 15})  # Inside
 
 print("========================|SISFALL_No_Headings|========================11=================")
 
@@ -80,6 +82,8 @@ print(results3)
 print('====================================')
 
 # Function to add value labels
+
+
 def valuelabel(results2, results3):
     for i in range(len(results2)):
         plt.text(i, results3[i], results3[i], ha='center',
@@ -88,16 +92,17 @@ def valuelabel(results2, results3):
 
 fig = plt.figure(figsize=(14, 10))
 plt.grid(True)
-plt.bar(names, results2, color='gray', width=0.8, label='accuracy')
+plt.bar(names, results3, color='gray', width=0.8, label='accuracy')
 # plt.bar(names,results2, color ='green',width = 0.8,label='time1')
 # plt.bar(names,results3, color ='yellow',width = 0.8,label='time2')
 plt.legend(loc='best', fontsize=sizingFont)
 plt.xlabel("Execution clock times in seconds", fontsize=sizingFont)
 plt.ylabel("Time in milisecons", fontsize=sizingFont)
-plt.title("1-Times spend for algorithm completing  its execution",
+plt.title("1-Accuracy acieved spend for algorithm completing  its execution",
           fontsize=sizingFont)
-plt.savefig('../UXVIEWS/others/score1.png', dpi=99, fontsize=sizingFont,
-            bbox_inches='tight', transparent=True)
+plt.savefig('../UXVIEWS/others/xcompare1.png', dpi=99,
+            fontsize=sizingFont, bbox_inches='tight', transparent=True)
+plt.savefig('../UXviews/xompare1.png')
 plt.close()
 
 
@@ -112,12 +117,13 @@ plt.ylabel("Clock time and Accuracy levels", fontsize=sizingFont)
 plt.title("2-Times spend for algorithm completing  its execution",
           fontsize=sizingFont)
 plt.title('2-ACCURACY-SECOND VERTICAL', fontsize=sizingFont)
-plt.savefig('../UXVIEWS/others/score2.png', dpi=99, fontsize=sizingFont,
-            bbox_inches='tight', transparent=True)
+plt.savefig('../UXVIEWS/others/xcompare2.png', dpi=99,
+            fontsize=sizingFont, bbox_inches='tight', transparent=True)
+plt.savefig('../UXviews/xcompare2.png')
 plt.close()
 
-
 print("==================|SCORE_close_X|========================")
+
 label1 = 'Time spent in completing the execution of a single task'
 label2 = 'Computational costs for the compared Algorithms'
 label3 = 'The period for task execution'
@@ -126,11 +132,13 @@ plt.grid(True)
 plt.bar(names, results2, color='gray', width=0.9, label='Time')
 # plt.bar(names, results3, color='blue', width=0.5, label='Accuracy')
 plt.legend(loc='best', fontsize=sizingFont)
-plt.title(label1,fontsize=sizingFont)
-plt.xlabel(label2,fontsize=sizingFont)
+plt.title(label1, fontsize=sizingFont)
+plt.xlabel(label2, fontsize=sizingFont)
 plt.ylabel(label3, fontsize=sizingFont)
 plt.xticks(rotation=30)
-plt.savefig('../UXVIEWS/others/score3.png', dpi=99,fontsize=sizingFont, bbox_inches='tight', transparent=True)
+plt.savefig('../UXVIEWS/others/xcompare3.png', dpi=99,
+            fontsize=sizingFont, bbox_inches='tight', transparent=True)
+plt.savefig('../UXviews/xcompare3.png')
 plt.show()
 
 print("==================|SCORE_THREE_X|========================")
