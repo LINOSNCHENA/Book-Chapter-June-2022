@@ -58,7 +58,7 @@ scoring = 'accuracy'
 print("======================================Model=========71=================")
 for name, model in models:
     kfold = model_selection.KFold(
-        n_splits=100, shuffle=True, random_state=seed)
+        n_splits=10, shuffle=True, random_state=seed)
     timeStart = time.time()
     cv_results = model_selection.cross_val_score(
         model, X, Y, cv=kfold, scoring=scoring)

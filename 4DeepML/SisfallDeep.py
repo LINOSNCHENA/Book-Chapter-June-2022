@@ -7,15 +7,13 @@ from keras.utils.vis_utils import plot_model
 import shap
 import tensorflow as tf
 tf.compat.v1.disable_v2_behavior()
-
+start = time.time()
+fontSized = 15
+n_features = 10
 seed = 1
-numpy.random.seed(seed)
 batch_size = 1
 epochs = 150
-fontSized = 15
-size = 15
-start = time.time()
-n_features = 10
+numpy.random.seed(seed)
 plotName="Deep-Learning-Sisfall-dataset "
 
 model = models.Sequential(name="DeepNN", layers=[
