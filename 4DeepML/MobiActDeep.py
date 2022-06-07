@@ -124,7 +124,7 @@ plt.title(str(plotName)+' | Model-Accuracy', fontsize=fontSized)
 plt.ylabel('Accuracy ', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 # plt.axis([0, epochs, 0.0, 1.1])
-plt.legend(['train         : %'+str(accArray1),
+plt.legend(['training  : %'+str(accArray1),
            'validation : %'+str(accArray12)], loc='best', fontsize=fontSized,)
 plt.savefig('../UXviews/B2.png')
 plt.savefig('../UXviews/deeplean/B2.png')
@@ -147,7 +147,7 @@ plt.ylabel('Loss values', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 plt.grid(True)
 # plt.axis([0, epochs, 0, 0.99])
-plt.legend(['train        :%'+str(accArray2),
+plt.legend(['training  : %'+str(accArray2),
            'validation : %'+str(accArray22)], loc='best', fontsize=fontSized,)
 plt.savefig('../UXviews/83.png')
 plt.savefig('../UXviews/deeplean/B3.png')
@@ -169,7 +169,7 @@ plt.title(str(plotName)+' | Model-Error', fontsize=fontSized)
 plt.ylabel('Error values', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 # plt.axis([0, epochs, 0, 0.99])
-plt.legend(['train         :%'+str(accArray3),
+plt.legend(['training  : %'+str(accArray3),
            'validation : %'+str(accArray32)], loc='best', fontsize=fontSized,)
 plt.savefig('../UXviews/B4.png')
 plt.savefig('../UXviews/deeplean/B4.png')
