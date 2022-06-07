@@ -11,10 +11,10 @@ import xgboost
 import pickle
 import warnings
 warnings.simplefilter('ignore')
-plt.rcParams['figure.figsize'] = [12, 8]
+plt.rcParams['figure.figsize'] = [12, 8] ## Plot-frame
 plt.rcParams["figure.autolayout"] = True
-plt.rcParams.update({'font.size': 15}) ## Inside
-sizingFont = 15                       ## SupTitle & Xlabel
+plt.rcParams.update({'font.size': 15})   ## Inside
+sizingFont = 15                          ## SupTitle & Xlabel
 n_features = 10
 seed = 1
 batch_size = 1
@@ -22,12 +22,6 @@ epochs = 10
 plotMethod = "Machine-Learning"
 datasetName = "Sisfall-Dataset"
 urlDataset = './../6dataXYZ/YSis1ALLS.csv'
-# plt.rc('axes', titlesize=20)
-# plt.rc('font', size=15)
-# plt.rc('axes', labelsize=12)  # fontsize of the x and y labels
-# plt.rc('xtick', labelsize=12)  # fontsize of the x tick labels
-# plt.rc('ytick', labelsize=12)  # fontsize of the y tick labels
-# plt.rc('legend', fontsize=10)  # fontsize of the legend
 print("==================================|Dataset_Used|====================================1============")
 
 
@@ -99,8 +93,8 @@ print(cm)
 
 # Feature importance-  Plot the top 7 features
 xgboost.plot_importance(model, max_num_features=21)
-plt.title('XGBoost Features(1) Importance 1| '+plotMethod, fontsize=sizingFont)
-plt.suptitle('XGBoost Features(2) Importance 2| '+plotMethod, fontsize=sizingFont)
+plt.suptitle('SuperTitle XGBoost Features(1) Importance 1| '+plotMethod, fontsize=sizingFont+4)
+plt.title('XGBoost Features(2) Importance 2| '+plotMethod, fontsize=sizingFont)
 plt.grid(True)
 plt.tight_layout()
 plt.savefig('../UXviews/A1.png')
@@ -119,12 +113,12 @@ array = confusion_matrix(test_Y, y_pred)
 df = pd.DataFrame(array, index=['ADLs', 'FALL'], columns=['ADLs', 'FALL'])
 plt.figure(figsize=(12, 8))
 sn.heatmap(df, annot=True, cmap='Greens', fmt='g')
-plt.xlabel('Predicted Values', fontsize=sizingFont, color='blue')
+plt.xlabel('Predicted Values', fontsize=sizingFont)
 plt.ylabel('Actual Value', fontsize=sizingFont)
-plt.suptitle('Xgboost Confusion Matrix | '+datasetName, fontsize=sizingFont)
+plt.xticks(rotation=40, fontsize=sizingFont)
+plt.yticks(rotation=40, fontsize=sizingFont)
+plt.suptitle('Xgboost Confusion Matrix | '+datasetName, fontsize=sizingFont+2)
 plt.tight_layout()
-plt.xticks(rotation=30, fontsize=sizingFont, color='red')
-plt.yticks(rotation=30, fontsize=sizingFont, color='red')
 plt.grid(True)
 plt.savefig('../UXviews/1A2.png')
 plt.savefig('../UXviews/ONE/1A2.png')
@@ -145,7 +139,7 @@ ax.plot(x_axis, results['validation_0']['auc'],
 ax.plot(x_axis, results['validation_1']['auc'],
         label='Test- %'+str(round(a2*100, 4)))
 ax.legend(loc="best",fontsize=sizingFont)
-plt.ylabel('AUC-Classification',fontsize=sizingFont)
+plt.ylabel('Accuracy in classification',fontsize=sizingFont)
 # plt.axis([0, epochs, 0.0000, 1.2000])
 plt.title('XGBoost Area Under The Curve(AUC) Accuracy | ' +
           datasetName, fontsize=sizingFont)
@@ -164,7 +158,7 @@ ax.plot(x_axis, results['validation_0']['logloss'],
 ax.plot(x_axis, results['validation_1']['logloss'],
         label='Test- %'+str(round(a2*100, 4)))
 ax.legend(fontsize=sizingFont, loc="best")
-plt.ylabel('Log Loss',fontsize=sizingFont)
+plt.ylabel('Lossin classification',fontsize=sizingFont)
 #plt.axis([0, epochs, 0.0, 1.1])
 plt.title('8.34-XGBoost LogLoss | '+datasetName, fontsize=sizingFont)
 plt.title('XGBoost LogLoss | '+datasetName, fontsize=sizingFont)
@@ -183,7 +177,7 @@ ax.plot(x_axis, results['validation_0']['error'],
 ax.plot(x_axis, results['validation_1']['error'],
         label='Test-  %'+str(round(a2*100, 4)))
 ax.legend(loc="best",fontsize=sizingFont)
-plt.ylabel('Classification Error',fontsize=sizingFont)
+plt.ylabel('Error in classification',fontsize=sizingFont)
 plt.title('XGBoost Classification Error | '+datasetName, fontsize=sizingFont)
 plt.grid(True)
 plt.tight_layout()
