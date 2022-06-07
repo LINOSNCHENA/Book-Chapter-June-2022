@@ -19,7 +19,6 @@ warnings.simplefilter('ignore')
 plt.rcParams['figure.figsize'] = [12, 8]  # Plot-frame
 plt.rcParams["figure.autolayout"] = True
 plt.rcParams.update({'font.size': 15})  # Inside
-
 print("========================|SISFALL_No_Headings|========================11=================")
 
 url = "./../6dataXYZ/YSis1ALLS.csv"
@@ -82,15 +81,13 @@ print(results3)
 print('====================================')
 
 # Function to add value labels
-
-
 def valuelabel(results2, results3):
     for i in range(len(results2)):
         plt.text(i, results3[i], results3[i], ha='center',
                  bbox=dict(facecolor='cyan', alpha=0.8))
 
-
-fig = plt.figure(figsize=(14, 10))
+print("==================|SCORE_close_X1|========================")
+fig = plt.figure(figsize=(12, 28)) ## h=12 w=8
 plt.grid(True)
 plt.bar(names, results3, color='gray', width=0.8, label='accuracy')
 # plt.bar(names,results2, color ='green',width = 0.8,label='time1')
@@ -103,10 +100,12 @@ plt.title("1-Accuracy acieved spend for algorithm completing  its execution",
 plt.savefig('../UXVIEWS/others/xcompare1.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
 plt.savefig('../UXviews/xompare1.png')
-plt.close()
+plt.show()
+#plt.close()
 
+print("==================|SCORE_close_X2|========================")
 
-fig = plt.figure(figsize=(14, 10))
+fig = plt.figure(figsize=(12, 28)) ## h=12 w=8
 plt.grid(True)
 plt.bar(names, results2, color='blue', width=0.9, label='Time')
 plt.bar(names, results3, color='gray', width=0.5, label='Accuracy')
@@ -120,17 +119,17 @@ plt.title('2-ACCURACY-SECOND VERTICAL', fontsize=sizingFont)
 plt.savefig('../UXVIEWS/others/xcompare2.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
 plt.savefig('../UXviews/xcompare2.png')
+plt.show()
 plt.close()
 
-print("==================|SCORE_close_X|========================")
+print("==================|SCORE_close_X3|========================")
 
 label1 = 'Time spent in completing the execution of a single task'
 label2 = 'Computational costs for the compared Algorithms'
 label3 = 'The period for task execution'
-fig = plt.figure(figsize=(14, 10))
+fig = plt.figure(figsize=(12, 8)) ## h=12 w=8
 plt.grid(True)
 plt.bar(names, results2, color='gray', width=0.9, label='Time')
-# plt.bar(names, results3, color='blue', width=0.5, label='Accuracy')
 plt.legend(loc='best', fontsize=sizingFont)
 plt.title(label1, fontsize=sizingFont)
 plt.xlabel(label2, fontsize=sizingFont)
