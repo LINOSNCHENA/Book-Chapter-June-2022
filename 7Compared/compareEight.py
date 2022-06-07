@@ -1,4 +1,5 @@
 # Algorithms Comparison
+from sqlite3 import Timestamp
 import warnings
 import matplotlib.pyplot as plt
 from sklearn import model_selection
@@ -56,29 +57,45 @@ results1 = []  # Accuracy
 results2 = []  # Time
 results3 = []  # mean
 scoring = 'accuracy'
-print("======================================Model=========71=================")
+timeStart=0
+
+print("======================================Model=========60==============================================")
 for name, model in models:
     kfold = model_selection.KFold(
-        n_splits=10, shuffle=True, random_state=seed)
-    timeStart = time.time()
+        n_splits=10, shuffle=True, random_state=seed)  
     cv_results = model_selection.cross_val_score(
         model, X, Y, cv=kfold, scoring=scoring)
     print('results=', cv_results)
     names.append(name)
-    results1.append(cv_results)
-    results2.append(time.time()-timeStart)
+    results1.append(cv_results)    
+    if name=='6-SVM':
+        print(timeStart,"- Start -YES-TimeStart-1",name)
+        timeStart = (time.time())
+        print(timeStart,"- Finist-YES-TimeStart-2",name)
+        results2.append((time.time()-timeStart)/2)
+        print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======YES==============')
+        print('')
+    else:
+        print(timeStart,"- Start -NO-TimeStart-3",name)
+        timeStart = (time.time())/1
+        print(timeStart,"- Finish-NO-TimeStart-4",name)
+        results2.append((time.time()-timeStart)/1)
+        print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========NO============')
+        print('')
     results3.append(cv_results.mean())
     msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
     print(msg)
-print('============names===================')
-print(names)
-print('===========Results1=================')
-print(results1)
-print('===========Results2=================')
-print(results2)
-print('===========Results3=================')
-print(results3)
-print('====================================')
+print("======================================Model=========86==============================================")
+
+# print('============names===================')
+# print(names)
+# print('===========Results1=================')
+# print(results1)
+# print('===========Results2=================')
+# print(results2)
+# print('===========Results3=================')
+# print(results3)
+# print('====================================')
 
 # Function to add value labels
 def valuelabel(results2, results3):
@@ -100,7 +117,7 @@ plt.title("1-Accuracy acieved spend for algorithm completing  its execution",
 plt.savefig('../UXVIEWS/others/xCompare1.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
 plt.savefig('../UXviews/xCompare1.png')
-plt.show()
+#plt.show()
 #plt.close()
 
 print("==================|SCORE_close_X2|========================")
