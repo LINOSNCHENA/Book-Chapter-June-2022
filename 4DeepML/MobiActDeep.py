@@ -14,7 +14,6 @@ seed = 1
 batch_size = 1
 epochs = 150
 numpy.random.seed(seed)
-
 plotName = "Deep-Learning-MobiAct-dataset "
 
 model = models.Sequential(name="DeepNN", layers=[
@@ -109,7 +108,7 @@ print(history.history.keys())
 print(accArray1)
 print(accArray12)
 
-# Setting the figure size and Frame
+# Setting the figure fontSized and Frame
 plt.figure(figsize=(18, 10))
 ax = plt.axes()
 ax.set_facecolor("beige")
@@ -120,15 +119,15 @@ plt.title(str(plotName)+' | Model-Accuracy', fontsize=fontSized)
 plt.ylabel('Accuracy values', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 # plt.axis([0, epochs, 0.0, 1.1])
-plt.legend(['train1,         : %'+str(accArray1),
-           'validation1, : %'+str(accArray12)], loc='best', fontsize=size,)
+plt.legend(['train,         : %'+str(accArray1),
+           'validation, : %'+str(accArray12)], loc='best', fontsize=fontSized,)
 plt.savefig('../UXviews/B2.png')
 plt.savefig('../UXviews/deeplean/B2.png')
 plt.show()
 
 
 print("\n ===============|4|======================|second_Plot|===================8==============")
-# Setting the figure size and Frame
+# Setting the figure fontSized and Frame
 print(accArray2)
 print(accArray22)
 
@@ -143,15 +142,15 @@ plt.ylabel('Loss values', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 plt.grid(True)
 # plt.axis([0, epochs, 0, 0.99])
-plt.legend(['train2,        :%'+str(accArray2),
-           'validation2, : %'+str(accArray22)], loc='best', fontsize=size,)
+plt.legend(['train,        :%'+str(accArray2),
+           'validation, : %'+str(accArray22)], loc='best', fontsize=fontSized,)
 plt.savefig('../UXviews/83.png')
 plt.savefig('../UXviews/deeplean/B3.png')
 plt.show()
 
 
 print("\n ===============|5|====================|Third_Plot|=========================9=============")
-# Setting the figure size and Frame
+# Setting the figure fontSized and Frame
 print(accArray3)
 print(accArray32)
 
@@ -165,8 +164,8 @@ plt.title(str(plotName)+' | Model-Error', fontsize=fontSized)
 plt.ylabel('Error values', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 # plt.axis([0, epochs, 0, 0.99])
-plt.legend(['train3,         :%'+str(accArray3),
-           'validation3, : %'+str(accArray32)], loc='best', fontsize=size,)
+plt.legend(['train,         :%'+str(accArray3),
+           'validation, : %'+str(accArray32)], loc='best', fontsize=fontSized,)
 plt.savefig('../UXviews/B4.png')
 plt.savefig('../UXviews/deeplean/B4.png')
 plt.show()
