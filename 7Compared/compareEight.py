@@ -68,18 +68,25 @@ for name, model in models:
     cv_results = model_selection.cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
     names.append(name)
     results1.append(cv_results)    
-    if (name!='6-SVM' or name!='7-RF'or name!='8-XG'):       
+    if (name !='6-SVM' or name !='7-RF'or name !='8-XG'):       
         timeEnd = time.time()-timeStart
-        print(timeEnd,"- Finist-YES-TimeStart-1",name)
-        results2.append(time.time()-timeStart)
-        print(timeEnd,"- Start -YES-TimeStart-2",name)
+        print(timeEnd,"- Finist-YES-TimeStart-A1",name)
+        print(time.time()-timeStart,"- Finist-YES-TimeStart-A2",name)
+        results2.append(timeEnd)
+        print(timeEnd,"- Start -YES-TimeStart-A3",name)
+        print(time.time()-timeStart,"- Finist-YES-TimeStart-A4",name)
         print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======YES==============')
         print('')
     else:
+    #if (name =='6-SVM' or name =='7-RF'or name =='8-XG'): 
         timeEnd = time.time()-timeStart
-        print(timeEnd,"- Finish-NO-TimeStart-3",name)
-        results2.append(time.time()-(timeStart)/4)
-        print(timeEnd,"- Start -NO-TimeStart-4",name)
+        print(timeEnd,"- Finish-NO-TimeStart-B1",name)
+        print(timeEnd/2,"- Finish-NO-TimeStart-B2",name)
+        print(time.time()-timeStart/2,"- Finist-YES-TimeStart-B3",name)
+        results2.append(timeEnd)
+        print(timeEnd,"- Start -NO-TimeStart-B4",name)
+        print(timeEnd/2,"- Finish-NO-TimeStart-B5",name)
+        print(time.time()-timeStart/2,"- Finist-YES-TimeStart-B6",name)
         print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========NO============')
         print('')
     results3.append(cv_results.mean())
@@ -100,7 +107,7 @@ print('=========================================')
 print("==================|SCORE_close_X1|========================")
 fig = plt.figure(figsize=(12, 8)) ## h=12 w=8
 plt.grid(True)
-plt.bar(names, results2, color='green', width=0.8, label='accuracy')
+plt.bar(names, results3, color='green', width=0.8, label='Accuracy')
 plt.legend(loc='best', fontsize=sizingFont)
 plt.xlabel("Execution clock times in seconds", fontsize=sizingFont)
 plt.ylabel("Time in milisecons", fontsize=sizingFont)
@@ -120,7 +127,7 @@ label2 = 'Computational costs for the compared Algorithms'
 label3 = 'The period for task execution'
 fig = plt.figure(figsize=(12, 8)) ## h=12 w=8
 plt.grid(True)
-plt.bar(names, results3, color='blue', width=0.9, label='Time')
+plt.bar(names, results2, color='blue', width=0.9, label='Time')
 plt.legend(loc='best', fontsize=sizingFont)
 plt.title(label1, fontsize=sizingFont)
 plt.xlabel(label2, fontsize=sizingFont)
