@@ -20,8 +20,8 @@ seed = 1
 batch_size = 1
 epochs = 10
 plotMethod = "Machine-Learning"
-datasetName = "Sisfall-Dataset"
-urlDataset = './../6dataXYZ/YSis1ALLS.csv'
+datasetName = "MobiAct-Dataset"
+urlDataset = './../6dataXYZ/XMobiAct6.csv'
 print("==================================|Dataset_Used|====================================1============")
 
 
@@ -97,8 +97,8 @@ plt.suptitle('SuperTitle XGBoost Features(1) Importance 1| '+plotMethod, fontsiz
 plt.title('XGBoost Features(2) Importance 2| '+plotMethod, fontsize=sizingFont)
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('../UXviews/A1.png')
-plt.savefig('../UXviews/1sisfall/A1.png')
+plt.savefig('../UXviews/B2.png')
+plt.savefig('../UXviews/1sisfall/B2.png')
 plt.show()
 # Predict the trading signal on test datset
 y_pred = model.predict(test_X)
@@ -120,8 +120,8 @@ plt.yticks(rotation=40, fontsize=sizingFont)
 plt.suptitle('Xgboost Confusion Matrix | '+datasetName, fontsize=sizingFont+2)
 plt.tight_layout()
 plt.grid(True)
-plt.savefig('../UXviews/A2.png')
-plt.savefig('../UXviews/1sisfall/A2.png')
+plt.savefig('../UXviews/B2.png')
+plt.savefig('../UXviews/1sisfall/B2.png')
 plt.show()
 print("======================================|Three_Plots|=====================================8============")
 
@@ -145,8 +145,8 @@ plt.title('XGBoost Area Under The Curve(AUC) Accuracy | ' +
           datasetName, fontsize=sizingFont)
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('../UXviews/A3.png')
-plt.savefig('../UXviews/1sisfall/A3.png')
+plt.savefig('../UXviews/B2.png')
+plt.savefig('../UXviews/1sisfall/B2.png')
 plt.show()
 
 # plot log loss
@@ -164,8 +164,8 @@ plt.title('8.34-XGBoost LogLoss | '+datasetName, fontsize=sizingFont)
 plt.title('XGBoost LogLoss | '+datasetName, fontsize=sizingFont)
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('../UXviews/A4.png')
-plt.savefig('../UXviews/1sisfall/A4.png')
+plt.savefig('../UXviews/B2.png')
+plt.savefig('../UXviews/1sisfall/B2.png')
 plt.show()
 
 # plot classification error
@@ -181,7 +181,7 @@ plt.ylabel('Error in classification',fontsize=sizingFont)
 plt.title('XGBoost Classification Error | '+datasetName, fontsize=sizingFont)
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('../UXviews/A5.png')
-plt.savefig('../UXviews/1sisfall/A5.png')
+plt.savefig('../UXviews/B2.png')
+plt.savefig('../UXviews/1sisfall/B2.png')
 plt.show()
 print("==========================|SISFALL_Successfully_Completed!|========================|XGBoost|=================")
