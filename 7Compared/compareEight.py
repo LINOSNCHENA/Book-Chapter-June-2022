@@ -87,7 +87,7 @@ def valuelabel(results2, results3):
                  bbox=dict(facecolor='cyan', alpha=0.8))
 
 print("==================|SCORE_close_X1|========================")
-fig = plt.figure(figsize=(12, 28)) ## h=12 w=8
+fig = plt.figure(figsize=(12, 8)) ## h=12 w=8
 plt.grid(True)
 plt.bar(names, results3, color='gray', width=0.8, label='accuracy')
 # plt.bar(names,results2, color ='green',width = 0.8,label='time1')
@@ -105,7 +105,7 @@ plt.show()
 
 print("==================|SCORE_close_X2|========================")
 
-fig = plt.figure(figsize=(12, 28)) ## h=12 w=8
+fig = plt.figure(figsize=(12, 8)) ## h=12 w=8
 plt.grid(True)
 plt.bar(names, results2, color='blue', width=0.9, label='Time')
 plt.bar(names, results3, color='gray', width=0.5, label='Accuracy')

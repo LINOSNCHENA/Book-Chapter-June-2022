@@ -17,7 +17,7 @@ fontSized = 15
 n_features = 10
 seed = 1
 batch_size = 1
-epochs = 5
+epochs = 2022
 numpy.random.seed(seed)
 plotName = "Deep-Learning | MobiAct-dataset "
 
