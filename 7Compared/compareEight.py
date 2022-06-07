@@ -42,20 +42,20 @@ seed = 1
 # prepare models
 models = []
 
-models.append(('1-LR', LogisticRegression()))
-models.append(('2-LDA', LinearDiscriminantAnalysis()))
-models.append(('3-KNN', KNeighborsClassifier()))
+# models.append(('1-LR', LogisticRegression()))
+# models.append(('2-LDA', LinearDiscriminantAnalysis()))
+# models.append(('3-KNN', KNeighborsClassifier()))
 models.append(('4-DTC', DecisionTreeClassifier()))
 models.append(('5-GNB', GaussianNB()))
 models.append(('6-SVM', SVC()))
-models.append(('7-RF', RandomForestClassifier()))
-models.append(('8-XG', XGBClassifier(eval_metric='logloss')))
+# models.append(('7-RF', RandomForestClassifier()))
+# models.append(('8-XG', XGBClassifier(eval_metric='logloss')))
 # models.append(('9-Lrg-BAD', LinearRegression()))
 # evaluate each model in turn
 names = []
-results1 = []  # Accuracy
-results2 = []  # Time
-results3 = []  # mean
+results1 = []  # Name
+results2 = []  # Accuracy
+results3 = []  # Times
 scoring = 'accuracy'
 timeStart=0
 
@@ -68,34 +68,35 @@ for name, model in models:
     print('results=', cv_results)
     names.append(name)
     results1.append(cv_results)    
-    if name=='6-SVM':
-        print(timeStart,"- Start -YES-TimeStart-1",name)
-        timeStart = (time.time())
-        print(timeStart,"- Finist-YES-TimeStart-2",name)
-        results2.append((time.time()-timeStart)/2)
+    if name!='6-SVM':       
+        timeStart = time.time()/2
+        print(timeStart,"- Finist-YES-TimeStart-1",name)
+       # results2.append(time.time()-(timeStart))
+        results3.append(time.time()-(timeStart))
+        print(timeStart,"- Start -YES-TimeStart-2",name)
         print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======YES==============')
         print('')
     else:
-        print(timeStart,"- Start -NO-TimeStart-3",name)
-        timeStart = (time.time())/1
-        print(timeStart,"- Finish-NO-TimeStart-4",name)
-        results2.append((time.time()-timeStart)/1)
+        timeStart = time.time()
+        print(timeStart,"- Finish-NO-TimeStart-3",name)
+       # results2.append(time.time()-timeStart)
+        results3.append(time.time()-(timeStart))
+        print(timeStart,"- Start -NO-TimeStart-4",name)
         print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========NO============')
         print('')
     results3.append(cv_results.mean())
     msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
     print(msg)
 print("======================================Model=========86==============================================")
-
-# print('============names===================')
-# print(names)
-# print('===========Results1=================')
-# print(results1)
-# print('===========Results2=================')
-# print(results2)
-# print('===========Results3=================')
-# print(results3)
-# print('====================================')
+print('============names===================')
+print(names)
+print('===========Results1=================')
+print(results1)
+print('===========Results2=================')
+print(results2)
+print('===========Results3=================')
+print(results3)
+print('====================================')
 
 # Function to add value labels
 def valuelabel(results2, results3):
@@ -106,12 +107,13 @@ def valuelabel(results2, results3):
 print("==================|SCORE_close_X1|========================")
 fig = plt.figure(figsize=(12, 8)) ## h=12 w=8
 plt.grid(True)
-plt.bar(names, results3, color='gray', width=0.8, label='accuracy')
+plt.bar(names, results2, color='gray', width=0.8, label='accuracy')
 # plt.bar(names,results2, color ='green',width = 0.8,label='time1')
 # plt.bar(names,results3, color ='yellow',width = 0.8,label='time2')
 plt.legend(loc='best', fontsize=sizingFont)
 plt.xlabel("Execution clock times in seconds", fontsize=sizingFont)
 plt.ylabel("Time in milisecons", fontsize=sizingFont)
+plt.xticks(rotation=30)
 plt.title("1-Accuracy acieved spend for algorithm completing  its execution",
           fontsize=sizingFont)
 plt.savefig('../UXVIEWS/others/xCompare1.png', dpi=99,
@@ -124,8 +126,8 @@ print("==================|SCORE_close_X2|========================")
 
 fig = plt.figure(figsize=(12, 8)) ## h=12 w=8
 plt.grid(True)
-plt.bar(names, results2, color='blue', width=0.9, label='Time')
-plt.bar(names, results3, color='gray', width=0.5, label='Accuracy')
+plt.bar(names, results2, color='blue', width=0.9, label='Accuracy')
+plt.bar(names, results3, color='red', width=0.5, label='Time')
 plt.legend(loc='best', fontsize=sizingFont)
 plt.xlabel("Eight different algorithms and thir computation costs",
            fontsize=sizingFont)
@@ -133,6 +135,7 @@ plt.ylabel("Clock time and Accuracy levels", fontsize=sizingFont)
 plt.title("2-Times spend for algorithm completing  its execution",
           fontsize=sizingFont)
 plt.title('2-ACCURACY-SECOND VERTICAL', fontsize=sizingFont)
+plt.xticks(rotation=30)
 plt.savefig('../UXVIEWS/others/xCompare2.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
 plt.savefig('../UXviews/xCompare2.png')
@@ -146,7 +149,7 @@ label2 = 'Computational costs for the compared Algorithms'
 label3 = 'The period for task execution'
 fig = plt.figure(figsize=(12, 8)) ## h=12 w=8
 plt.grid(True)
-plt.bar(names, results2, color='gray', width=0.9, label='Time')
+plt.bar(names, results3, color='gray', width=0.9, label='Time')
 plt.legend(loc='best', fontsize=sizingFont)
 plt.title(label1, fontsize=sizingFont)
 plt.xlabel(label2, fontsize=sizingFont)
