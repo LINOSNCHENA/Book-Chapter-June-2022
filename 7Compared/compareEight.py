@@ -97,9 +97,9 @@ plt.xlabel("Execution clock times in seconds", fontsize=sizingFont)
 plt.ylabel("Time in milisecons", fontsize=sizingFont)
 plt.title("1-Accuracy acieved spend for algorithm completing  its execution",
           fontsize=sizingFont)
-plt.savefig('../UXVIEWS/others/xcompare1.png', dpi=99,
+plt.savefig('../UXVIEWS/others/xCompare1.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
-plt.savefig('../UXviews/xompare1.png')
+plt.savefig('../UXviews/xCompare1.png')
 plt.show()
 #plt.close()
 
@@ -116,9 +116,9 @@ plt.ylabel("Clock time and Accuracy levels", fontsize=sizingFont)
 plt.title("2-Times spend for algorithm completing  its execution",
           fontsize=sizingFont)
 plt.title('2-ACCURACY-SECOND VERTICAL', fontsize=sizingFont)
-plt.savefig('../UXVIEWS/others/xcompare2.png', dpi=99,
+plt.savefig('../UXVIEWS/others/xCompare2.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
-plt.savefig('../UXviews/xcompare2.png')
+plt.savefig('../UXviews/xCompare2.png')
 plt.show()
 plt.close()
 
@@ -135,9 +135,9 @@ plt.title(label1, fontsize=sizingFont)
 plt.xlabel(label2, fontsize=sizingFont)
 plt.ylabel(label3, fontsize=sizingFont)
 plt.xticks(rotation=30)
-plt.savefig('../UXVIEWS/others/xcompare3.png', dpi=99,
+plt.savefig('../UXVIEWS/others/xCompare3.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
-plt.savefig('../UXviews/xcompare3.png')
+plt.savefig('../UXviews/xCompare3.png')
 plt.show()
 
 print("==================|SCORE_THREE_X|========================")

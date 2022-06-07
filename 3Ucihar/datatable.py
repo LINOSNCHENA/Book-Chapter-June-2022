@@ -1,14 +1,16 @@
-# PLOT_DATASET_ONE
-import textwrap
-import numpy as np
+# PLOT_DATASET_Training_1_And_Testing_2
+
 from matplotlib import pyplot as plt
 import pandas as pd
+import numpy as np
+import textwrap
+
 pd.set_option('max_colwidth', 10)
 pd.options.display.precision = 3
 plt.rcParams['figure.figsize'] = [15, 8]  # Plot-frame
 plt.rcParams["figure.autolayout"] = True
 plt.rcParams.update({'font.size': 29})  # Inside
-fontSizing = 12  # SupTitle & Xlabel
+fontSizing = 13  # SupTitle & Xlabel
 recordWidth = 14
 
 kalas = ['palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green', 'palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green',
