@@ -68,7 +68,7 @@ for name, model in models:
     cv_results = model_selection.cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
     names.append(name)
     results1.append(cv_results)    
-    if name!='6-SVM' or name!='6-SVM'or name!='6-SVM':       
+    if (name!='6-SVM' or name!='7-RF'or name!='8-XG'):       
         timeEnd = time.time()-timeStart
         print(timeEnd,"- Finist-YES-TimeStart-1",name)
         results2.append(time.time()-timeStart)
@@ -78,27 +78,24 @@ for name, model in models:
     else:
         timeEnd = time.time()-timeStart
         print(timeEnd,"- Finish-NO-TimeStart-3",name)
-        results2.append((time.time()-timeStart)/2)
+        results2.append(time.time()-(timeStart)/4)
         print(timeEnd,"- Start -NO-TimeStart-4",name)
         print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========NO============')
         print('')
     results3.append(cv_results.mean())
     msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
-    print(msg)
- 
+    print(msg) 
     # your code
     stop = time.time()
-    print("The time of the run:", stop - start)
+    print(name,"The time of the run:", stop - start)
 print("======================================Model=========86==============================================")
 print('===========Result1-Names1=================')
 print(names)
-#print('===========Result1-cv_All_Accuracies=============')
-#print(results1)
 print('===========Result2-Times2=================')
 print(results2)
 print('===========Result3-Accuracy3==============')
 print(results3)
-print('====================================')
+print('=========================================')
 
 print("==================|SCORE_close_X1|========================")
 fig = plt.figure(figsize=(12, 8)) ## h=12 w=8
@@ -142,11 +139,9 @@ plt.grid(True)
 plt.bar(names, results2, color='blue', width=0.5, label='Accuracy')
 plt.bar(names, results3, color='red', width=0.9, label='Time')
 plt.legend(loc='best', fontsize=sizingFont)
-plt.xlabel("Eight different algorithms and thir computation costs",
-           fontsize=sizingFont)
+plt.xlabel("Eight different algorithms and thir computation costs", fontsize=sizingFont)
 plt.ylabel("Clock time and Accuracy levels", fontsize=sizingFont)
-plt.title("3-Times spend for algorithm completing  its execution",
-          fontsize=sizingFont)
+plt.title("3-Times spend for algorithm completing  its execution", fontsize=sizingFont)
 plt.title('3-ACCURACY-SECOND VERTICAL', fontsize=sizingFont)
 plt.xticks(rotation=30)
 # plt.ylim(0, 100)
