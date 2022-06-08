@@ -69,14 +69,14 @@ for name, model in models:
     names.append(name)
     results1.append(cv_results)
     if (name != '6-SVM' or name == '7-RF' or name != '8-XG'):
-        results2.append((time.time()-startTime)/1)
+        results2.append((time.time()-startTime)/3)
         print(time.time()-startTime, "- Finist-YES-startTime-A1", name)
         print((time.time()-startTime)/3, "- Finist-YES-startTime-A2", name)
         print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======YES==============')
         print('')
     else:
     # if (name =='6-SVM' or name =='7-RF'or name =='8-XG'):
-        results2.append((time.time()-startTime)/2)
+        results2.append((time.time()-startTime)/1)
         print(time.time()-startTime/1, "- Finist-N0-startTime-B1", name)
         print((time.time()-startTime)/3, "- Finist-N0-startTime-B2", name)
         print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========NO============')
