@@ -63,28 +63,29 @@ print("======================================Model=========60===================
 for name, model in models:
     startTime = time.time()
     kfold = model_selection.KFold(
-        n_splits=10, shuffle=True, random_state=seed)  
-    cv_results = model_selection.cross_val_score(model, X, Y, cv=kfold, scoring=scoring)
+        n_splits=10, shuffle=True, random_state=seed)
+    cv_results = model_selection.cross_val_score(
+        model, X, Y, cv=kfold, scoring=scoring)
     names.append(name)
-    results1.append(cv_results)    
-    if (name !='6-SVM' or name =='7-RF'or name !='8-XG'):       
-        results2.append((time.time()-startTime))
-        print(time.time()-startTime,"- Finist-YES-startTime-A1",name)
-        print(time.time()-startTime/(startTime*2),"- Finist-YES-startTime-A2",name)
+    results1.append(cv_results)
+    if (name != '6-SVM' or name == '7-RF' or name != '8-XG'):
+        results2.append((time.time()-startTime)/1)
+        print(time.time()-startTime, "- Finist-YES-startTime-A1", name)
+        print((time.time()-startTime)/3, "- Finist-YES-startTime-A2", name)
         print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======YES==============')
         print('')
     else:
-    #if (name =='6-SVM' or name =='7-RF'or name =='8-XG'): 
-        results2.append(time.time()-startTime/(startTime*2))
-        print(time.time()-startTime/1,"- Finist-N0-startTime-B1",name)
-        print(time.time()-startTime/(startTime*2),"- Finist-N0-startTime-B2",name)
+    # if (name =='6-SVM' or name =='7-RF'or name =='8-XG'):
+        results2.append((time.time()-startTime)/2)
+        print(time.time()-startTime/1, "- Finist-N0-startTime-B1", name)
+        print((time.time()-startTime)/3, "- Finist-N0-startTime-B2", name)
         print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========NO============')
         print('')
     results3.append(cv_results.mean())
-    msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
-    print(msg) 
+    msg="%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+    print(msg)
     # your code
-    stop = time.time()
+    stop=time.time()
     # print(name,"The time of the run ABC:", stop - startTime)
     # print(name,"The time of the run:XYZ", startTime - startTime)
 print("======================================Model=========86==============================================")
@@ -98,10 +99,10 @@ print('=========================================')
 
 
 print("==================|SCORE_close_X1|========================")
-label1 = 'Time spent in completing the execution of a single task'
-label2 = 'Computational costs for the compared Algorithms'
-label3 = 'The period for task execution'
-fig = plt.figure(figsize=(12, 8)) ## h=12 w=8
+label1='Time spent in completing the execution of a single task'
+label2='Computational costs for the compared Algorithms'
+label3='The period for task execution'
+fig=plt.figure(figsize=(12, 8))  # h=12 w=8
 plt.grid(True)
 plt.bar(names, results2, color='blue', width=0.9, label='Time-1')
 plt.legend(loc='best', fontsize=sizingFont)
@@ -109,21 +110,22 @@ plt.title(label1, fontsize=sizingFont)
 plt.xlabel(label2, fontsize=sizingFont)
 plt.ylabel(label3, fontsize=sizingFont)
 plt.xticks(rotation=30)
-#plt.ylim(0, 100)
+# plt.ylim(0, 100)
 plt.savefig('../UXVIEWS/others/xCompare1.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
 plt.savefig('../UXviews/xCompare1.png')
 plt.show()
 
 print("==================|SCORE_close_X2|========================")
-fig = plt.figure(figsize=(12, 8)) ## h=12 w=8
+fig=plt.figure(figsize=(12, 8))  # h=12 w=8
 plt.grid(True)
 plt.bar(names, results3, color='green', width=0.8, label='Accuracy-2')
 plt.legend(loc='best', fontsize=sizingFont)
-plt.xlabel("Computational costs for the compared Algorithms", fontsize=sizingFont)
+plt.xlabel("Computational costs for the compared Algorithms",
+           fontsize=sizingFont)
 plt.ylabel("Percentage in accuracy", fontsize=sizingFont)
 plt.xticks(rotation=30)
-#plt.ylim(0, 100)
+# plt.ylim(0, 100)
 plt.title("Accuracy acieved spend for algorithm completing  its execution",
           fontsize=sizingFont)
 plt.savefig('../UXVIEWS/others/xCompare2.png', dpi=99,
@@ -132,14 +134,16 @@ plt.savefig('../UXviews/xCompare2.png')
 plt.show()
 
 print("==================|SCORE_close_X3|========================")
-fig = plt.figure(figsize=(12, 8)) ## h=12 w=8
+fig=plt.figure(figsize=(12, 8))  # h=12 w=8
 plt.grid(True)
 plt.bar(names, results2, color='blue', width=0.5, label='Time-1')
 plt.bar(names, results3, color='red', width=0.9, label='Accuracy-2')
 plt.legend(loc='best', fontsize=sizingFont)
-plt.xlabel("Eight different algorithms and thir computation costs", fontsize=sizingFont)
+plt.xlabel("Eight different algorithms and thir computation costs",
+           fontsize=sizingFont)
 plt.ylabel("Clock time and Accuracy levels", fontsize=sizingFont)
-plt.title("3-Times spend for algorithm completing  its execution", fontsize=sizingFont)
+plt.title("3-Times spend for algorithm completing  its execution",
+          fontsize=sizingFont)
 plt.title('3-ACCURACY-SECOND VERTICAL', fontsize=sizingFont)
 plt.xticks(rotation=30)
 # plt.ylim(0, 100)
@@ -149,20 +153,25 @@ plt.savefig('../UXviews/xCompare3.png')
 plt.show()
 # plt.close()
 
-print("==================|SCORE_THREE_X|========================")
+print("==================|SCORE_ONE_X|========================")
 
-a = 2012
-b = 2009
+a=2012
+b=20093
+c=20093
+d=2012
 if b > a:
   print("b is greater than a")
 elif a == b:
   print("a and b are equal")
-
-a = 2009
-b = 2012
-if b > a:
-  print("b is greater than a")
-elif a == b:
-  print("a and b are equal")
+print("==================|SCORE_TWO_Y|========================")
+if c > d:
+  print("d is greater than c")
+elif d == c:
+  print("c and d are equal")
+print("==================|SCORE_TWO_Z|========================")
+if a > d:
+  print("d is greater than a")
+elif d == a:
+  print("a and d are equal")
 
 print("==================|else_four_X|========================")
