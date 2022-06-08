@@ -68,17 +68,17 @@ for name, model in models:
         model, X, Y, cv=kfold, scoring=scoring)
     names.append(name)
     results1.append(cv_results)
-    if (name != '6-SVM' or name == '7-RF' or name != '8-XG'):
-        results2.append((time.time()-startTime)/3)
+    if ((name != '6-SVM') or (name != '7-RF') or (name != '8-XG')):
+        results2.append((time.time()-startTime)/1)
         print(time.time()-startTime, "- Finist-YES-startTime-A1", name)
-        print((time.time()-startTime)/3, "- Finist-YES-startTime-A2", name)
+        print((time.time()-startTime)/5, "- Finist-YES-startTime-A2", name)
         print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======YES==============')
         print('')
     else:
     # if (name =='6-SVM' or name =='7-RF'or name =='8-XG'):
-        results2.append((time.time()-startTime)/1)
+        results2.append((time.time()-startTime)/5)
         print(time.time()-startTime/1, "- Finist-N0-startTime-B1", name)
-        print((time.time()-startTime)/3, "- Finist-N0-startTime-B2", name)
+        print((time.time()-startTime)/5, "- Finist-N0-startTime-B2", name)
         print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========NO============')
         print('')
     results3.append(cv_results.mean())
@@ -156,8 +156,8 @@ plt.show()
 print("==================|SCORE_ONE_X|========================")
 
 a=2012
-b=20093
-c=20093
+b=200
+c=100
 d=2012
 if b > a:
   print("b is greater than a")
