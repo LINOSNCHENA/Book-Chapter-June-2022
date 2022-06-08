@@ -63,12 +63,12 @@ for name, model in models:
         model, X, Y, cv=kfold, scoring=scoring)
     names.append(name)
     results1.append(cv_results)
-    if name != "6-SVM" or name != "7-RF" or name != "8-XG":
+    if name != '6-SVM':# or name != '7-RF' or name != '8-XG':
        # results2.append((time.time()-startTime)/5)
         print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======PASS1==============',x)
         print(time.time()-startTime, "- First-YES-Option-A1", name)
         print((time.time()-startTime)/5, "- First-YES-Option-B2", name)
-        ZED=(time.time()-startTime)/1
+        ZED=(time.time()-startTime)/5
         print(name,'zed-1',ZED,'x=',x)
         print('')
     # elif name != "7-RF":
@@ -89,7 +89,7 @@ for name, model in models:
         print('============time2========================ZZZZZZZZZZZZZZZZZZZZZZ===========MAYBE============',x)
         print(time.time()-startTime/1, "- Third-N0-Option-A1", name)
         print((time.time()-startTime)/5, "- Third-N0-Option-B2", name)
-        ZED=(time.time()-startTime)/4
+        ZED=(time.time()-startTime)/5
         print(name,'zed-3',ZED,'x=',x)
         print('')     
 
@@ -97,8 +97,8 @@ for name, model in models:
     results3.append(cv_results.mean())
     msg="%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
     print(msg)
-    x=x+1
     print('============time2==============================================Counter===========END=================================',x) 
+    x=x+1
 
 print("======================================Model==========================99=============================")
 print('===========Result1-Names1=================')
@@ -117,7 +117,7 @@ label2='Computational costs for the compared Algorithms'
 label3='The period for task execution'
 fig=plt.figure(figsize=(12, 8))  # h=12 w=8
 plt.grid(True)
-plt.bar(names, results2, color='green', width=0.9, label='Time-1')
+plt.bar(names, results2, color='gray', width=0.9, label='Time')
 plt.legend(loc='best', fontsize=sizingFont)
 plt.title(label1, fontsize=sizingFont)
 plt.xlabel(label2, fontsize=sizingFont)
@@ -132,7 +132,7 @@ plt.show()
 print("==================|SCORE_close_X2|========================")
 fig=plt.figure(figsize=(12, 8))  # h=12 w=8
 plt.grid(True)
-plt.bar(names, results3, color='yellow', width=0.8, label='Accuracy-2')
+plt.bar(names, results3, color='yellow', width=0.8, label='Accuracy')
 plt.legend(loc='best', fontsize=sizingFont)
 plt.xlabel("Computational costs for the compared Algorithms",
            fontsize=sizingFont)

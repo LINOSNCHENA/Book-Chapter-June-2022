@@ -2,7 +2,6 @@
 
 ## 1. Three Machine Learning Algorithms
 ```
-conda activate diploma4
 ===========================================================01
 python SisfallMakeData.py
 python MobiactMakeData.py
@@ -15,17 +14,17 @@ python UciharxGboost.py
 ===========================================================03
 python x1Vertical.py
 python x2Horizontal.py
-
 ```
 
 ## 2 - Three Deep-Learning algorithms
 ```
 ===========================================================04
+conda activate diploma4
+
 python Sisfalldeep.py
 python MobiActDeep.py
 python UciharDeep.py
 ```
-
 ## 3. Others four algorithms
 ```
 ===========================================================05
