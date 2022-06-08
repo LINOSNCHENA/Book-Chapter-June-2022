@@ -17,7 +17,7 @@ fontSized = 15
 n_features = 10
 seed = 1
 batch_size = 1
-epochs = 2022
+epochs = 150
 numpy.random.seed(seed)
 plotName = "Deep-Learning-Ucihar-dataset "
 

@@ -26,22 +26,16 @@ url = "./../6dataXYZ/YSis1ALLS.csv"
 dataframe = pd.read_csv(url, header=1, delimiter=",")
 print(dataframe.shape)
 l = -1*len(dataframe.columns)
-print(l)
-print(dataframe.head(4))
+# print(l)
+# print(dataframe.head(4))
 dataframe = dataframe.iloc[0:19090:, (l):]  # 22-Records, last-15 headers
 array = dataframe.values
 X = array[:, 1:19]
 Y = array[:, 0:1]
 # prepare configuration for cross validation test harness
-print("===========================================================12=================")
 seed = 7
-print(X.shape)
-print(Y.shape)
-print(array.shape)
-seed = 1
 # prepare models
 models = []
-
 models.append(('1-LR', LogisticRegression()))
 models.append(('2-LDA', LinearDiscriminantAnalysis()))
 models.append(('3-KNN', KNeighborsClassifier()))
@@ -57,48 +51,63 @@ results1 = []  # Name
 results2 = []  # Accuracy
 results3 = []  # Times
 scoring = 'accuracy'
+x=1
 
-
-print("======================================Model=========60==============================================")
+print("======================================Model=========56==============================================")
 for name, model in models:
     startTime = time.time()
+    
     kfold = model_selection.KFold(
         n_splits=10, shuffle=True, random_state=seed)
     cv_results = model_selection.cross_val_score(
         model, X, Y, cv=kfold, scoring=scoring)
     names.append(name)
     results1.append(cv_results)
-    if ((name != '6-SVM') or (name != '7-RF') or (name != '8-XG')):
-        results2.append((time.time()-startTime)/5)
-        print(time.time()-startTime, "- Finist-YES-startTime-A1", name)
-        print((time.time()-startTime)/5, "- Finist-YES-startTime-A2", name)
-        print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======YES==============')
+    if ((name != '6-SVM') or (name == '7-RF') or (name != '8-XG')):
+       # results2.append((time.time()-startTime)/5)
+        print(time.time()-startTime, "- First-YES-Option-A1", name)
+        print((time.time()-startTime)/5, "- First-YES-Option-B2", name)
+        print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======PASS==============',x)
+        ZED=(time.time()-startTime)/1
+        print('zed-1',ZED,'x=',x)
         print('')
-    #elif :
     elif ((name == '6-SVM') or (name == '7-RF') or (name == '8-XG')):
-        results2.append((time.time()-startTime)/1)
-        print(time.time()-startTime/1, "- Finist-N0-startTime-B1", name)
-        print((time.time()-startTime)/5, "- Finist-N0-startTime-B2", name)
-        print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========NO============')
+      #  results2.append((time.time()-startTime)/1)
+        print(time.time()-startTime/1, "- Second-N0-Option-A1", name)
+        print((time.time()-startTime)/5, "- Second-N0-Option-B2", name)
+        print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========FAIL============',x)
+        ZED=(time.time()-startTime)/5
+        print('zed-2',ZED,'x=',x)
         print('')
+    else:
+      #  results2.append((time.time()-startTime)/1)
+        print(time.time()-startTime/1, "- Third-N0-Option-A1", name)
+        print((time.time()-startTime)/5, "- Third-N0-Option-B2", name)
+        print('============time2========================ZZZZZZZZZZZZZZZZZZZZZZ========MAYBE============',x)
+        ZED=(time.time()-startTime)/5
+        print('zed-3',ZED,'x=',x)
+        print('')     
+
+    results2.append(ZED)
     results3.append(cv_results.mean())
     msg="%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+    print('============time2==============================================Counter===========END=================================',x)
     print(msg)
+    x=x+1
     # your code
     stop=time.time()
-    # print(name,"The time of the run ABC:", stop - startTime)
-    # print(name,"The time of the run:XYZ", startTime - startTime)
-print("======================================Model=========86==============================================")
+print("======================================Model==========================99=============================")
 print('===========Result1-Names1=================')
 print(names)
 print('===========Result2-Times2=================')
 print(results2)
 print('===========Result3-Accuracy3==============')
 print(results3)
-print('=========================================')
+print('==========================================')
 
 
 print("==================|SCORE_close_X1|========================")
+
 label1='Time spent in completing the execution of a single task'
 label2='Computational costs for the compared Algorithms'
 label3='The period for task execution'
