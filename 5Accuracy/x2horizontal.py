@@ -1,3 +1,4 @@
+import warnings
 import cv2
 import matplotlib.pyplot as plt
 from pandas.plotting import table
@@ -6,6 +7,12 @@ from matplotlib import pyplot as plt
 import pandas as pd
 plt.rcParams["figure.figsize"] = [18.50, 5.50]
 plt.rcParams["figure.autolayout"] = True
+
+sizingFont = 15
+warnings.simplefilter('ignore')
+plt.rcParams['figure.figsize'] = [12, 8]  # Plot-frame
+plt.rcParams["figure.autolayout"] = True
+plt.rcParams.update({'font.size': 15})  # Inside
 print("===================================|ORIGINAL|================================1=============")
 
 df1 = pd.read_csv("ACC/ACCURACYSISFALL.csv", header=1,)

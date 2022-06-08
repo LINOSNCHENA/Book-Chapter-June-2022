@@ -17,6 +17,12 @@ import numpy as np
 import warnings
 warnings.simplefilter('ignore')
 
+sizingFont = 15
+warnings.simplefilter('ignore')
+plt.rcParams['figure.figsize'] = [12, 8]  # Plot-frame
+plt.rcParams["figure.autolayout"] = True
+plt.rcParams.update({'font.size': 15})  # Inside
+
 print("========================|SISFALL_No_Headings|========================|FIRST|=================")
 
 dataframe = pd.read_csv('./../6dataXYZ/YSis1ALLS.csv', header=1, delimiter=",")
@@ -95,7 +101,7 @@ plt.boxplot(results)
 ax.set_xticklabels(names)
 plt.axhline(y=1.05, xmin=0.1, xmax=0.9, dashes=(5, 5), c='b')
 plt.axhline(y=0.65, xmin=0.06, dashes=(5, 5), c='r')
-plt.xticks(rotation=90)
+plt.xticks(rotation=30)
 plt.grid(True)
 plt.tight_layout()
 plt.savefig('../UXviews/V1.png')
@@ -182,7 +188,7 @@ plt.boxplot(results)
 ax.set_xticklabels(names)
 plt.axhline(y=1.05, xmin=0.1, xmax=0.9, dashes=(5, 5), c='b')
 plt.axhline(y=0.65, xmin=0.06, dashes=(5, 5), c='r')
-plt.xticks(rotation=90)
+plt.xticks(rotation=30)
 plt.grid(True)
 plt.tight_layout()
 plt.savefig('../UXviews/V2.png')
@@ -273,7 +279,7 @@ plt.boxplot(results)
 ax.set_xticklabels(names)
 plt.axhline(y=1.05, xmin=0.1, xmax=0.9, dashes=(5, 5), c='b')
 plt.axhline(y=0.65, xmin=0.06, dashes=(5, 5), c='r')
-plt.xticks(rotation=90)
+plt.xticks(rotation=30)
 plt.grid(True)
 plt.tight_layout()
 plt.savefig('../UXviews/V3.png')
