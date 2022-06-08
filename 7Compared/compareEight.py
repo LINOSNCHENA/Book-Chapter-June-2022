@@ -70,23 +70,23 @@ for name, model in models:
     results1.append(cv_results)    
     if (name !='6-SVM' or name !='7-RF'or name !='8-XG'):       
         timeEnd = time.time()-timeStart
-        print(timeEnd,"- Finist-YES-TimeStart-A1",name)
+        print(time.time()-timeStart,"- Finist-YES-TimeStart-A1",name)
         print(time.time()-timeStart,"- Finist-YES-TimeStart-A2",name)
-        results2.append(timeEnd)
-        print(timeEnd,"- Start -YES-TimeStart-A3",name)
+        results2.append(time.time()-timeStart)
+        print(time.time()-timeStart,"- Finist-YES-TimeStart-A3",name)
         print(time.time()-timeStart,"- Finist-YES-TimeStart-A4",name)
         print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======YES==============')
         print('')
     else:
     #if (name =='6-SVM' or name =='7-RF'or name =='8-XG'): 
         timeEnd = time.time()-timeStart
-        print(timeEnd,"- Finish-NO-TimeStart-B1",name)
-        print(timeEnd/2,"- Finish-NO-TimeStart-B2",name)
-        print(time.time()-timeStart/2,"- Finist-YES-TimeStart-B3",name)
-        results2.append(timeEnd)
-        print(timeEnd,"- Start -NO-TimeStart-B4",name)
-        print(timeEnd/2,"- Finish-NO-TimeStart-B5",name)
-        print(time.time()-timeStart/2,"- Finist-YES-TimeStart-B6",name)
+        print(timeStart,"- Finist-NO-TimeStart-B100",name)
+        print(time.time(),"- Finist-NO-TimeStart-B111",name)
+        print(time.time()-timeStart/1,"- Finist-NO-TimeStart-B1",name)
+        print(time.time()-timeStart/2,"- Finist-N0-TimeStart-B2",name)
+        results2.append(time.time()-timeStart/2)
+        print(time.time()-timeStart/1,"- Finist-N0-TimeStart-B3",name)
+        print(time.time()-timeStart/2,"- Finist-NO-TimeStart-B4",name)
         print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========NO============')
         print('')
     results3.append(cv_results.mean())
