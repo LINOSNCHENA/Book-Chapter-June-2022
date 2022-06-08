@@ -63,34 +63,32 @@ for name, model in models:
         model, X, Y, cv=kfold, scoring=scoring)
     names.append(name)
     results1.append(cv_results)
- #   if ((name != "6-SVM") or (name == "7-RF") or (name != "8-XG")):
-  #  if (name != "6-SVM" or name != "7-RF" or name != "8-XG"):
-    if name != "6-SVM":
+    if name != "6-SVM" or name != "7-RF" or name != "8-XG":
        # results2.append((time.time()-startTime)/5)
-        print(time.time()-startTime, "- First-YES-Option-A1", name)
-        print((time.time()-startTime)/5, "- First-YES-Option-B2", name)
         print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======PASS1==============',x)
-        ZED=(time.time()-startTime)/1
-        print(name,'zed-1',ZED,'x=',x)
-        print('')
-    elif name != "7-RF":
         print(time.time()-startTime, "- First-YES-Option-A1", name)
         print((time.time()-startTime)/5, "- First-YES-Option-B2", name)
-        print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======PASS2==============',x)
         ZED=(time.time()-startTime)/1
         print(name,'zed-1',ZED,'x=',x)
         print('')
-    elif name != "8-XG":
-        print(time.time()-startTime, "- First-YES-Option-A1", name)
-        print((time.time()-startTime)/5, "- First-YES-Option-B2", name)
-        print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======PASS3==============',x)
-        ZED=(time.time()-startTime)/1
-        print(name,'zed-1',ZED,'x=',x)
-        print('')
+    # elif name != "7-RF":
+    #     print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======PASS2==============',x)
+    #     print(time.time()-startTime, "- First-YES-Option-A1", name)
+    #     print((time.time()-startTime)/5, "- First-YES-Option-B2", name)
+    #     ZED=(time.time()-startTime)/1
+    #     print(name,'zed-1',ZED,'x=',x)
+    #     print('')
+    # elif name != "8-XG":
+    #     print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======PASS3==============',x)
+    #     print(time.time()-startTime, "- First-YES-Option-A1", name)
+    #     print((time.time()-startTime)/5, "- First-YES-Option-B2", name)
+    #     ZED=(time.time()-startTime)/1
+    #     print(name,'zed-1',ZED,'x=',x)
+    #     print('')
     else:
+        print('============time2========================ZZZZZZZZZZZZZZZZZZZZZZ===========MAYBE============',x)
         print(time.time()-startTime/1, "- Third-N0-Option-A1", name)
         print((time.time()-startTime)/5, "- Third-N0-Option-B2", name)
-        print('============time2========================ZZZZZZZZZZZZZZZZZZZZZZ========MAYBE============',x)
         ZED=(time.time()-startTime)/4
         print(name,'zed-3',ZED,'x=',x)
         print('')     
@@ -98,11 +96,10 @@ for name, model in models:
     results2.append(ZED)
     results3.append(cv_results.mean())
     msg="%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
-    print('============time2==============================================Counter===========END=================================',x)
     print(msg)
     x=x+1
-    # your code
-    stop=time.time()
+    print('============time2==============================================Counter===========END=================================',x) 
+
 print("======================================Model==========================99=============================")
 print('===========Result1-Names1=================')
 print(names)
