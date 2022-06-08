@@ -63,29 +63,30 @@ for name, model in models:
         model, X, Y, cv=kfold, scoring=scoring)
     names.append(name)
     results1.append(cv_results)
-    if ((name != '6-SVM') or (name == '7-RF') or (name != '8-XG')):
+ #   if ((name != "6-SVM") or (name == "7-RF") or (name != "8-XG")):
+    if name != "6-SVM" or name == "7-RF" or name != "8-XG":
        # results2.append((time.time()-startTime)/5)
         print(time.time()-startTime, "- First-YES-Option-A1", name)
         print((time.time()-startTime)/5, "- First-YES-Option-B2", name)
         print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======PASS==============',x)
         ZED=(time.time()-startTime)/1
-        print('zed-1',ZED,'x=',x)
+        print(name,'zed-1',ZED,'x=',x)
         print('')
-    elif ((name == '6-SVM') or (name == '7-RF') or (name == '8-XG')):
-      #  results2.append((time.time()-startTime)/1)
-        print(time.time()-startTime/1, "- Second-N0-Option-A1", name)
-        print((time.time()-startTime)/5, "- Second-N0-Option-B2", name)
-        print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========FAIL============',x)
-        ZED=(time.time()-startTime)/5
-        print('zed-2',ZED,'x=',x)
-        print('')
+    # elif ((name == '6-SVM') or (name == '7-RF') or (name == '8-XG')):
+    #   #  results2.append((time.time()-startTime)/1)
+    #     print(time.time()-startTime/1, "- Second-N0-Option-A1", name)
+    #     print((time.time()-startTime)/5, "- Second-N0-Option-B2", name)
+    #     print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========FAIL============',x)
+    #     ZED=(time.time()-startTime)/5
+    #     print(name,'zed-2',ZED,'x=',x)
+    #     print('')
     else:
       #  results2.append((time.time()-startTime)/1)
         print(time.time()-startTime/1, "- Third-N0-Option-A1", name)
         print((time.time()-startTime)/5, "- Third-N0-Option-B2", name)
         print('============time2========================ZZZZZZZZZZZZZZZZZZZZZZ========MAYBE============',x)
-        ZED=(time.time()-startTime)/5
-        print('zed-3',ZED,'x=',x)
+        ZED=(time.time()-startTime)/4
+        print(name,'zed-3',ZED,'x=',x)
         print('')     
 
     results2.append(ZED)
@@ -113,7 +114,7 @@ label2='Computational costs for the compared Algorithms'
 label3='The period for task execution'
 fig=plt.figure(figsize=(12, 8))  # h=12 w=8
 plt.grid(True)
-plt.bar(names, results2, color='blue', width=0.9, label='Time-1')
+plt.bar(names, results2, color='green', width=0.9, label='Time-1')
 plt.legend(loc='best', fontsize=sizingFont)
 plt.title(label1, fontsize=sizingFont)
 plt.xlabel(label2, fontsize=sizingFont)
@@ -128,7 +129,7 @@ plt.show()
 print("==================|SCORE_close_X2|========================")
 fig=plt.figure(figsize=(12, 8))  # h=12 w=8
 plt.grid(True)
-plt.bar(names, results3, color='green', width=0.8, label='Accuracy-2')
+plt.bar(names, results3, color='yellow', width=0.8, label='Accuracy-2')
 plt.legend(loc='best', fontsize=sizingFont)
 plt.xlabel("Computational costs for the compared Algorithms",
            fontsize=sizingFont)
@@ -145,8 +146,8 @@ plt.show()
 print("==================|SCORE_close_X3|========================")
 fig=plt.figure(figsize=(12, 8))  # h=12 w=8
 plt.grid(True)
-plt.bar(names, results2, color='blue', width=0.5, label='Time-1')
-plt.bar(names, results3, color='red', width=0.9, label='Accuracy-2')
+plt.bar(names, results2, color='orange', width=0.5, label='Time-1')
+plt.bar(names, results3, color='green', width=0.9, label='Accuracy-2')
 plt.legend(loc='best', fontsize=sizingFont)
 plt.xlabel("Eight different algorithms and thir computation costs",
            fontsize=sizingFont)
