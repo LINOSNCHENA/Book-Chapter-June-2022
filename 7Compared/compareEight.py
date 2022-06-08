@@ -64,24 +64,30 @@ for name, model in models:
     names.append(name)
     results1.append(cv_results)
  #   if ((name != "6-SVM") or (name == "7-RF") or (name != "8-XG")):
-    if name != "6-SVM" or name == "7-RF" or name != "8-XG":
+  #  if (name != "6-SVM" or name != "7-RF" or name != "8-XG"):
+    if name != "6-SVM":
        # results2.append((time.time()-startTime)/5)
         print(time.time()-startTime, "- First-YES-Option-A1", name)
         print((time.time()-startTime)/5, "- First-YES-Option-B2", name)
-        print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======PASS==============',x)
+        print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======PASS1==============',x)
         ZED=(time.time()-startTime)/1
         print(name,'zed-1',ZED,'x=',x)
         print('')
-    # elif ((name == '6-SVM') or (name == '7-RF') or (name == '8-XG')):
-    #   #  results2.append((time.time()-startTime)/1)
-    #     print(time.time()-startTime/1, "- Second-N0-Option-A1", name)
-    #     print((time.time()-startTime)/5, "- Second-N0-Option-B2", name)
-    #     print('============time2========================EEEEEEEEEEEEEELLLLLLSSSS========FAIL============',x)
-    #     ZED=(time.time()-startTime)/5
-    #     print(name,'zed-2',ZED,'x=',x)
-    #     print('')
+    elif name != "7-RF":
+        print(time.time()-startTime, "- First-YES-Option-A1", name)
+        print((time.time()-startTime)/5, "- First-YES-Option-B2", name)
+        print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======PASS2==============',x)
+        ZED=(time.time()-startTime)/1
+        print(name,'zed-1',ZED,'x=',x)
+        print('')
+    elif name != "8-XG":
+        print(time.time()-startTime, "- First-YES-Option-A1", name)
+        print((time.time()-startTime)/5, "- First-YES-Option-B2", name)
+        print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======PASS3==============',x)
+        ZED=(time.time()-startTime)/1
+        print(name,'zed-1',ZED,'x=',x)
+        print('')
     else:
-      #  results2.append((time.time()-startTime)/1)
         print(time.time()-startTime/1, "- Third-N0-Option-A1", name)
         print((time.time()-startTime)/5, "- Third-N0-Option-B2", name)
         print('============time2========================ZZZZZZZZZZZZZZZZZZZZZZ========MAYBE============',x)
