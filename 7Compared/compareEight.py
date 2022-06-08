@@ -74,8 +74,8 @@ for name, model in models:
         print((time.time()-startTime)/5, "- Finist-YES-startTime-A2", name)
         print('============time1=======================IIIIIIIIIIIIIIFFFFFFFFFFF=======YES==============')
         print('')
-    else:
-    # if (name =='6-SVM' or name =='7-RF'or name =='8-XG'):
+    #elif :
+    elif ((name == '6-SVM') or (name == '7-RF') or (name == '8-XG')):
         results2.append((time.time()-startTime)/5)
         print(time.time()-startTime/1, "- Finist-N0-startTime-B1", name)
         print((time.time()-startTime)/5, "- Finist-N0-startTime-B2", name)
@@ -155,7 +155,7 @@ plt.show()
 
 print("==================|SCORE_ONE_X|========================")
 
-a=2012
+a=320
 b=200
 c=100
 d=2012
