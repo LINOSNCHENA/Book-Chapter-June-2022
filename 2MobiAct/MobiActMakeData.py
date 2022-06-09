@@ -147,10 +147,11 @@ ax1 = ax.table(cellText=df7.values, colLabels=df7.columns, loc ='center', colCol
 ax1 = ax.table(cellText=df7.values, colLabels=df7.columns, loc ='center', fontsize=sizingFont)
 ax1.auto_set_font_size(False)
 ax1.set_fontsize(sizingFont)
+plt.suptitle('../UXviews/tableS/TB1.png')
 plt.title('DATASET_2_MOBIACT | # Headers= '+str(c) + ' / '+str(len(df1.columns)) + ': # Records='+str(l)+'/'+str(len(df1))+'|', fontsize=sizingFont,          
      color='green', fontweight="bold")
 plt.tight_layout()
-plt.savefig('../UXviews/table2/T8A.png')
+plt.savefig('../UXviews/tableS/TB1.png')
 plt.show()
 
 print('=======================================|Plot_TWO|========================================[6]=============')
@@ -163,9 +164,10 @@ ax1 = ax.table(cellText=df8.values, colLabels=df8.columns, loc='center', colColo
 ax1 = ax.table(cellText=df8.values, colLabels=df8.columns, loc='center', fontsize=sizingFont)
 ax1.auto_set_font_size(False)
 ax1.set_fontsize(sizingFont)
+plt.suptitle('../UXviews/tableS/TB2.png')
 plt.title('DATASET_2_MOBIACT | # Headers= '+str(c) + ' / '+str(len(df2.columns)) +': # Records='+str(l)+'/'+str(len(df2))+'|', fontsize=sizingFont, color='green', fontweight="bold")
 plt.tight_layout()
-plt.savefig('../UXviews/table2/T8B.png')
+plt.savefig('../UXviews/tables/TB2.png')
 plt.show()
 
 print(df5.shape)

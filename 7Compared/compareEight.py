@@ -124,7 +124,7 @@ plt.xlabel(label2, fontsize=sizingFont)
 plt.ylabel(label3, fontsize=sizingFont)
 plt.xticks(rotation=30)
 # plt.ylim(0, 100)
-plt.savefig('../UXVIEWS/others/xCompare1.png', dpi=99,
+plt.savefig('../UXVIEWS/4Compare/xCompare1.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
 plt.savefig('../UXviews/xCompare1.png')
 plt.show()
@@ -141,7 +141,7 @@ plt.xticks(rotation=30)
 # plt.ylim(0, 100)
 plt.title("Accuracy acieved spend for algorithm completing  its execution",
           fontsize=sizingFont)
-plt.savefig('../UXVIEWS/others/xCompare2.png', dpi=99,
+plt.savefig('../UXVIEWS/4Compare/xCompare2.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
 plt.savefig('../UXviews/xCompare2.png')
 plt.show()
@@ -160,7 +160,7 @@ plt.title("3-Times spend for algorithm completing  its execution",
 plt.title('3-ACCURACY-SECOND VERTICAL', fontsize=sizingFont)
 plt.xticks(rotation=30)
 # plt.ylim(0, 100)
-plt.savefig('../UXVIEWS/others/xCompare3.png', dpi=99,
+plt.savefig('../UXVIEWS/4Compare/xCompare3.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
 plt.savefig('../UXviews/xCompare3.png')
 plt.show()

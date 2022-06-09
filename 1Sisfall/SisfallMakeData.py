@@ -92,11 +92,13 @@ ax1 = ax.table(cellText=df2.values, colLabels=df2.columns,
                loc='center', fontsize=sizingFont)
 ax1.auto_set_font_size(False)
 ax1.set_fontsize(sizingFont)
+plt.suptitle('../UXviews/tables/TA1.png')
 plt.title('DATASET_1_SISFALL | # Headers= '+str(c) + ' / '+str(len(df33.columns)) +
           ': # Records='+str(l)+'/'+str(len(df33))+'|', fontsize=sizingFont, color='green', fontweight="bold")
 plt.tight_layout()
-plt.savefig('../UXviews/tables/T8A.png')
+plt.savefig('../UXviews/tables/TA1.png')
 plt.show()
+
 df2 = pd.DataFrame(df34)
 print(df2.shape)
 df2.to_csv(r'./../6dataXYZ/YSis1ALLS.csv', index=0)
@@ -119,10 +121,11 @@ ax1 = ax.table(cellText=df4.values, colLabels=df4.columns,
                loc='center', fontsize=sizingFont)
 ax1.auto_set_font_size(False)
 ax1.set_fontsize(sizingFont)
+plt.suptitle('../UXviews/tables/TA2.png')
 plt.title('DATASET_1_SISFALL | # Headers= '+str(c) + ' / '+str(len(df2.columns)) +
           ': # Records='+str(l)+'/'+str(len(df2))+'|', fontsize=sizingFont, color='green', fontweight="bold")
 plt.tight_layout()
-plt.savefig('../UXviews/tables/TACA.png')
+plt.savefig('../UXviews/tables/TA2.png')
 plt.show()
 print('=======================================|SISFALL_THREE_SMALL|===========================|6|=============')
 df10 = pd.read_csv('./../6dataXYZ/YSis1ALLS.csv', header=0, delimiter=',')

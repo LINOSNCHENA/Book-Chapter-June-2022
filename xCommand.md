@@ -25,11 +25,12 @@ python Sisfalldeep.py
 python MobiActDeep.py
 python UciharDeep.py
 ```
-## 3. Others four algorithms
+## 3. Compare the four Algorithms
 ```
 ===========================================================05
 python compareEight.py
 python keras1.py
+python kmodel2.py
 python nnet3.py
 python regression4.py
 ```

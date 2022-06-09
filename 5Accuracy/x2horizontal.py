@@ -7,7 +7,6 @@ from matplotlib import pyplot as plt
 import pandas as pd
 plt.rcParams["figure.figsize"] = [18.50, 5.50]
 plt.rcParams["figure.autolayout"] = True
-
 sizingFont = 15
 warnings.simplefilter('ignore')
 plt.rcParams['figure.figsize'] = [12, 8]  # Plot-frame
@@ -59,10 +58,11 @@ tabla.auto_set_font_size(False)  # Activate set fontsize manually
 tabla.set_fontsize(12)  # if ++fontsize is necessary ++colWidths
 tabla.scale(1.2, 1.2)  # change size table
 plt.grid(True)
+plt.suptitle('ACCURACY-HORIZONTAL ALL THREE DATASETS')
 plt.title('1-ACCURACY-HORIZONTAL')
 plt.tight_layout()
 plt.savefig('../UXVIEWS/VH1.png', dpi=99, bbox_inches='tight')
-plt.savefig('../UXVIEWS/ACC/VH1.png', dpi=99, bbox_inches='tight')
+plt.savefig('../UXVIEWS/3ACC/VH1.png', dpi=99, bbox_inches='tight')
 plt.show()
 
 print("===================================|Plotting_SECOND|============================3=============")
@@ -91,8 +91,9 @@ tabla = table(ax, df, loc='center', colWidths=[0.17]*len(df.columns))
 tabla.auto_set_font_size(False)  # Activate set fontsize manually
 tabla.set_fontsize(12)  # if ++fontsize is necessary ++colWidths
 tabla.scale(1.2, 1.2)  # change size table
-plt.title('2-ACCURACY-VERTICAL')
-plt.savefig('../UXVIEWS/ACC/VH2.png', dpi=99,
+plt.suptitle('ACCURACY-VERTICAL| All three datasets')
+plt.title('2-ACCURACY-VERTICAL| All three datasets')
+plt.savefig('../UXVIEWS/3ACC/VH2.png', dpi=99,
             bbox_inches='tight', transparent=True)
 plt.show()
 
@@ -124,8 +125,9 @@ tabla = table(ax, df2, loc='upper right', colWidths=[
 tabla.auto_set_font_size(False)  # Activate set fontsize manually
 tabla.set_fontsize(12)  # if ++fontsize is necessary ++colWidths
 tabla.scale(1.2, 1.2)  # change size table
+plt.suptitle('ACCURACY-SECOND VERTICAL - All three datasets')
 plt.title('3-ACCURACY-SECOND VERTICAL')
-plt.savefig('../UXVIEWS/ACC/VH3.png', dpi=99,
+plt.savefig('../UXVIEWS/3ACC/VH3.png', dpi=99,
             bbox_inches='tight', transparent=True)
 plt.show()
 

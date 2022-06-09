@@ -34,7 +34,7 @@ plt.scatter(features[:, 0],
 plt.title("1A-Visualization of the three-types of Penguins")
 plt.xlabel("Body Mass")
 plt.ylabel("Culmen Length")
-plt.savefig('../UXviews/others/A1.png')
+plt.savefig('../UXviews/4Compare/A1.png')
 plt.show()
 
 model = tf.keras.Sequential([
@@ -125,7 +125,7 @@ axes[1].plot(train_accuracy_results)
 # plt.show()
 plt.suptitle("1B-Visualaization of the loss and accuracy of prediction")
 plt.savefig("1_AI_manual.png")
-plt.savefig('../UXviews/others/A2.png')
+plt.savefig('../UXviews/4Compare/A2.png')
 plt.show()
 
 

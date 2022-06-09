@@ -174,7 +174,7 @@ for metric in metrics:
 #plt.show()
 plt.suptitle("========tile3=====175===========")
 #plt.savefig("3A_AI_manual.png")
-plt.savefig('../UXviews/others/C1.png')
+plt.savefig('../UXviews/4Compare/C1.png')
 plt.show()
 
 print('===========================Threee====180======================================')
@@ -230,7 +230,7 @@ explainer_shap(model,
 plt.suptitle('3B-Combined-3a-scratch.png')
 plt.title('cOMBINED-3b-scratch.png')
 #plt.savefig('3-scratch.png')
-plt.savefig('../UXviews/others/C2.png')
+plt.savefig('../UXviews/4Compare/C2.png')
 
 # explainer_shap(model, 
 #                X_names=list_feature_names, 
@@ -241,6 +241,6 @@ plt.savefig('../UXviews/others/C2.png')
 # plt.suptitle('cOMBINED-3a-scratch.png')
 # plt.title('cOMBINED-3b-scratch.png')
 # plt.savefig('3-scratch.png')
-# plt.savefig('../UXviews/others/T3C.png')
+# plt.savefig('../UXviews/4Compare/T3C.png')
 
 print('====================|END-tHREE|====================')
