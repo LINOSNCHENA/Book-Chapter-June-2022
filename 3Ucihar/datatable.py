@@ -3,6 +3,7 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import numpy as np
 import textwrap
+
 pd.set_option('max_colwidth', 10)
 pd.options.display.precision = 15
 plt.rcParams['figure.figsize'] = [15, 8]  # Plot-frame
@@ -10,7 +11,8 @@ plt.rcParams["figure.autolayout"] = True
 plt.rcParams.update({'font.size': 15})  # Inside
 fontSizing = 13  # SupTitle & Xlabel
 recordWidth = 14
-roundOffX = 5
+roundOffX = 3
+sizingFont=13
 
 kalas = ['palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green', 'palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green',
          'palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green', 'palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green',
@@ -66,21 +68,21 @@ df3 = df3.round(roundOffX)
 l = len(df3)
 c = len(df3.columns)
 
-fig, ax = plt.subplots(figsize=(18, 2))
+# fig, ax = plt.subplots(figsize=(18, 2))
+fig, ax = plt.subplots()
 fig.patch.set_visible(False)
 ax.axis('off')
 ax.axis('tight')
 ax1 = ax.table(cellText=df3.values, colLabels=df3.columns,
-               loc='center', colColours=kalas, fontsize=15)
+               loc='center', colColours=kalas, fontsize=sizingFont)
 ax1 = ax.table(cellText=df3.values, colLabels=df3.columns,
-               loc='center', fontsize=15)
+               loc='center', fontsize=sizingFont)
 ax1.auto_set_font_size(False)
 ax1.set_fontsize(fontSizing)
 plt.suptitle('../UXviews/tables/TC1.png')
 plt.title('1-DATASET_UCIHAR_TRAINING | # Headers= '+str(c) + ' / '+str(len(df1.columns)) +
           ': # Records='+str(l)+'/'+str(len(df1))+'|', fontsize=fontSizing, color='green', fontweight="bold")
-# plt.tight_layout()
-# fig.tight_layout()
+plt.tight_layout()
 plt.savefig('../UXviews/tables/TC1.png')
 plt.show()
 print(df3)
@@ -127,21 +129,20 @@ df3 = df3.round(roundOffX)
 l = len(df3)
 c = len(df3.columns)
 
-fig, ax = plt.subplots(figsize=(18, 2))
+fig, ax = plt.subplots()
 fig.patch.set_visible(False)
 ax.axis('off')
 ax.axis('tight')
 ax1 = ax.table(cellText=df3.values, colLabels=df3.columns,
-               loc='center', colColours=kalas, fontsize=15)
+               loc='center', colColours=kalas, fontsize=sizingFont)
 ax1 = ax.table(cellText=df3.values, colLabels=df3.columns,
-               loc='center', fontsize=15)
+               loc='center', fontsize=sizingFont)
 ax1.auto_set_font_size(False)
 ax1.set_fontsize(fontSizing)
 plt.suptitle('../UXviews/tables/TC2.png')
 plt.title('2-DATASET_UCIHAR_TESTING | # Headers= '+str(c) + ' / '+str(len(df1.columns)) +
           ': # Records='+str(l)+'/'+str(len(df1))+'|', fontsize=fontSizing, color='green', fontweight="bold")
 plt.tight_layout()
-fig.tight_layout()
 plt.savefig('../UXviews/tables/TC2.png')
 plt.show()
 
