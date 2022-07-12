@@ -1,17 +1,14 @@
 # START- Comparison
 
-Below are screen shots from the application output-UCIHAR
+Below are screen shots from the application output-UCIHAR-tables
 
-![ Muntu #1 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/a1.png)
-![ Muntu #2 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/a2.png)
-![ Muntu #3 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/a3.png)
+![ Muntu #1 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/Ta1.png)
+![ Muntu #2 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/Ta2.png)
 
-![ Muntu #1 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/b1.png)
-![ Muntu #2 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/b2.png)
-![ Muntu #3 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/b3.png)
+![ Muntu #1 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/Tb1.png)
+![ Muntu #2 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/Tb2.png)
 
-![ Muntu #1 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/c1.png)
-![ Muntu #2 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/c2.png)
-![ Muntu #3 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/c3.png)
+![ Muntu #1 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/Tc1.png)
+![ Muntu #2 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/master/uXViews/Tables/Tc2.png)
 
 # End
