@@ -34,4 +34,5 @@ Below are screen shots from the application output-UCIHAR
 ![ Muntu #6 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/main/uXViews/Table4/T5A.png)
 ![ Muntu #7 ](https://github.com/LINOSNCHENA/BOOK-CHAPTER-2022/blob/main/uXViews/Table4/T5B.png)
 
+
 # End

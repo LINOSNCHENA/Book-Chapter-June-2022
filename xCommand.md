@@ -56,4 +56,5 @@ https://www.tensorflow.org/tutorials/customization/custom_training_walkthrough
 https://towardsdatascience.com/deep-learning-with-python-neural-networks-complete-tutorial-6b53c0b06af0
 https://realpython.com/python-ai-neural-network/
 ```
+
 # END
