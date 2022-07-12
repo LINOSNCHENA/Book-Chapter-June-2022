@@ -1,79 +1,59 @@
-## TWO FALL-DETECTION AND ONE HAR APPLICATIONS
+# TWO FALL-DETECTION AND ONE HAR APPLICATIONS
 
+## 1. Three Machine Learning Algorithms
 ```
-conda activate diploma4
 ===========================================================01
-10: MobiAct and Sisfall Data
-
-python pmobiact1.py
-python psisfall1.py
-
-python f1vertical.py
-python f2horizontal.py
-
-python S1zambia4A.py
-python S2second2.py
-python S3zambia4B.py
-python S4zambia4C.py
-
-
-python zamb1.py
-python zamb2.py
-python zamb3.py
-
-Method keras-Good
-python zambia1A.py
-python zambia1B.py
-python zambia1C.py
-
-Method xgboost
-python zambia3A.py
-python zambia3B.py
-python zambia3C.py
-============================================================20
-```
-## 2 - UCI-HAR algorithm
-```
+python SisfallMakeData.py
+python MobiactMakeData.py
+python UciharMakeData.py
 python dataTable.py
-python uciharData.py
-
-conda activate diploma3
-
-============================================================30
+===========================================================02
+python SisfallxGboost.py
+python MobiActxGboost.py
+python UciharxGboost.py
+===========================================================03
+python x1Vertical.py
+python x2Horizontal.py
 ```
 
-## Links
+## 2 - Three Deep-Learning algorithms
+```
+===========================================================04
+conda activate diploma4
+
+python Sisfalldeep.py
+python MobiActDeep.py
+python UciharDeep.py
+```
+## 3. Compare the four Algorithms
+```
+===========================================================05
+python compareEight.py
+python keras1.py
+python kmodel2.py
+python nnet3.py
+python regression4.py
 ```
 
+## 4 - Enviromental installation
+```
+===========================================================06
+conda install -c conda-forge tensorflow
+conda install -c conda-forge matplotlib
+conda install -c conda-forge opencv
+conda install -c anaconda pandas
+pip install tensorflow_datasets
+pip install lazypredict
+pip install Jinja2
+pip install shap
+conda activate diploma4
+```
+
+## 5. Links
+```
+===========================================================07
 https://www.tensorflow.org/tutorials/customization/custom_training_walkthrough
 https://towardsdatascience.com/deep-learning-with-python-neural-networks-complete-tutorial-6b53c0b06af0
 https://realpython.com/python-ai-neural-network/
-
-pip install tensorflow_datasets
-pip install shap
-pip install lazypredict
 ```
-============================================================20
-## 3 - Deep-Learning algorithm
-```
-conda activate diploma3
-
-python keras1.py
-python keras2.py
-python kmodel3.py
-python nnet4.py
-python score4.py
-
-python xx1c.py
-
-conda create -n diploma4
-conda install -c conda-forge tensorflow
-pip install tensorflow_datasets
-conda install -c conda-forge matplotlib
-conda install -c anaconda pandas
-pip install Jinja2
-
-============================================================30
-```
-
 # END
