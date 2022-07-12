@@ -1,8 +1,6 @@
 # START- Comparison
 
-Below are screen shots from the application output-UCIHAR-tables
-
-https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/Tables/TA1.png
+Below are screen shots from the application output [ALL-TABLES]
 
 ![ Muntu #1 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/Tables/TA1.png)
 ![ Muntu #2 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/Tables/TA2.png)
