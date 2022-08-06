@@ -79,7 +79,7 @@ print(history.history.keys())
 scores = model.evaluate(X, Y, verbose=0)
 print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
 # serialize model to JSON
-plot_model(model, to_file='../UXViews/2deepLearn/C1.png',#title="1-MODEL DESIGN AND IMPLEMENTATION-UCIHAR",
+plot_model(model, to_file='../UXViews/2deepLearn/D31.png',#title="1-MODEL DESIGN AND IMPLEMENTATION-UCIHAR",
            show_shapes=True, show_layer_names=True)
 print("=============================================11================================4===============")
 print(model.metrics_names)
@@ -126,8 +126,8 @@ plt.xlabel('epoch', fontsize=fontSized)
 # plt.axis([0, epochs, 0.0, 1.1])
 plt.legend(['training   : %'+str(accArray1),
            'validation : %'+str(accArray12)], loc='best', fontsize=fontSized,)
-plt.savefig('../UXviews/C2.png')
-plt.savefig('../UXviews/2deepLearn/C2.png')
+plt.savefig('../UXviews/D32.png')
+plt.savefig('../UXviews/2deepLearn/D32.png')
 plt.show()
 
 
@@ -149,8 +149,8 @@ plt.grid(True)
 # plt.axis([0, epochs, 0, 0.99])
 plt.legend(['train      : %'+str(accArray2),
            'validation : %'+str(accArray22)], loc='best', fontsize=fontSized,)
-plt.savefig('../UXviews/C3.png')
-plt.savefig('../UXviews/2deepLearn/C3.png')
+plt.savefig('../UXviews/D33.png')
+plt.savefig('../UXviews/2deepLearn/D33.png')
 plt.show()
 
 
@@ -171,8 +171,8 @@ plt.xlabel('epoch', fontsize=fontSized)
 # plt.axis([0, epochs, 0, 0.99])
 plt.legend(['training   : %'+str(accArray3),
            'validation : %'+str(accArray32)], loc='best', fontsize=fontSized,)
-plt.savefig('../UXviews/C4.png')
-plt.savefig('../UXviews/2deepLearn/C4.png')
+plt.savefig('../UXviews/D34.png')
+plt.savefig('../UXviews/2deepLearn/D34.png')
 plt.show()
 
 print("\n ===============================|Period of Execution|====================10============\n")
