@@ -31,9 +31,11 @@ Below are screen shots from the application output-UCIHAR-3
 
 Below are screen shots from the application output-COMPARE-4
 
-![ Muntu #41 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/xcompare1.png)
-![ Muntu #42 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/xcompare2.png)
-![ Muntu #43 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/xcompare3.png)
+![ Muntu #41 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/A1.png)
+![ Muntu #42 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/A2.png)
+![ Muntu #43 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare1.png)
+![ Muntu #44 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare2.png)
+![ Muntu #45 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare3.png)
 
 
 # End
