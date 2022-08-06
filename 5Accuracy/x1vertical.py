@@ -1,7 +1,5 @@
 # Compare Algorithms
-import pandas
 import matplotlib.pyplot as plt
-from keras.utils.vis_utils import plot_model
 from sklearn import model_selection
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
@@ -9,22 +7,20 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
-from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 import pandas as pd
-import numpy as np
 import warnings
-warnings.simplefilter('ignore')
-sizingFont = 15
+
 warnings.simplefilter('ignore')
 plt.rcParams['figure.figsize'] = [12, 8]  # Plot-frame
 plt.rcParams["figure.autolayout"] = True
 plt.rcParams.update({'font.size': 15})  # Inside
+sizingFont = 15
 
 print("========================|SISFALL_No_Headings|========================|FIRST|=================")
 
-dataframe = pd.read_csv('./../6dataXYZ/YSis1ALLS.csv', header=1, delimiter=",")
+dataframe = pd.read_csv('./../7Data/YSis1ALLS.csv', header=1, delimiter=",")
 print(dataframe.shape)
 l = -1*len(dataframe.columns)
 print(l)
@@ -105,7 +101,7 @@ plt.axhline(y=0.65, xmin=0.06, dashes=(5, 5), c='r')
 plt.xticks(rotation=30)
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('../UXviews/V1.png')
+# plt.savefig('../UXviews/V1.png')
 plt.savefig('../UXviews/3ACC/V1.png')
 
 print(type(results))
@@ -116,7 +112,7 @@ print(y_pred.shape)
 
 print("==============================|MOBIACT_STARTS_Without_Headers|==============|SECOND|===============")
 
-dataframe = pd.read_csv('./../6dataXYZ/XMobiACT7.csv', header=1, delimiter=",")
+dataframe = pd.read_csv('./../7Data/XMobiACT7.csv', header=1, delimiter=",")
 print((dataframe.shape[0])/3)
 print(dataframe.head(4))
 l = -1*len(dataframe.columns)
@@ -193,7 +189,7 @@ plt.axhline(y=0.65, xmin=0.06, dashes=(5, 5), c='r')
 plt.xticks(rotation=30)
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('../UXviews/V2.png')
+# plt.savefig('../UXviews/V2.png')
 plt.savefig('../UXviews/3ACC/V2.png')
 
 print(type(results))
@@ -204,7 +200,7 @@ print(y_pred.shape)
 
 print("============================|UCIHAR_STARTS_Without_Head|==============|THIRD|=================")
 
-dataframe = pd.read_csv('./../6dataxyz/Ucihar2.csv', header=1, delimiter=",")
+dataframe = pd.read_csv('./../7Data/Ucihar2.csv', header=1, delimiter=",")
 print(dataframe.shape)
 l = -1*len(dataframe.columns)
 print(l)
@@ -285,7 +281,7 @@ plt.axhline(y=0.65, xmin=0.06, dashes=(5, 5), c='r')
 plt.xticks(rotation=30)
 plt.grid(True)
 plt.tight_layout()
-plt.savefig('../UXviews/V3.png')
+# plt.savefig('../UXviews/V3.png')
 plt.savefig('../UXviews/3ACC/V3.png')
 
 print(type(results))

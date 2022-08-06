@@ -22,7 +22,7 @@ plt.rcParams["figure.autolayout"] = True
 plt.rcParams.update({'font.size': 15})  # Inside
 print("========================|SISFALL_No_Headings|========================11=================")
 
-url = "./../6dataXYZ/YSis1ALLS.csv"
+url = "./../7Data/YSis1ALLS.csv"
 dataframe = pd.read_csv(url, header=1, delimiter=",")
 print(dataframe.shape)
 l = -1*len(dataframe.columns)
@@ -99,16 +99,6 @@ for name, model in models:
     print('============time2==============================================Counter===========END=================================',x) 
     x=x+1
 
-print("======================================Model==========================99=============================")
-print('===========Result1-Names1=================')
-print(names)
-print('===========Result2-Times2=================')
-print(results2)
-print('===========Result3-Accuracy3==============')
-print(results3)
-print('==========================================')
-
-
 print("==================|SCORE_close_X1|========================")
 
 label1='Time spent in completing the execution of a single task'
@@ -126,7 +116,6 @@ plt.xticks(rotation=30)
 # plt.ylim(0, 100)
 plt.savefig('../UXVIEWS/4Compare/xCompare1.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
-plt.savefig('../UXviews/xCompare1.png')
 plt.show()
 
 print("==================|SCORE_close_X2|========================")
@@ -143,7 +132,6 @@ plt.title("2-Accuracy acieved spend for algorithm completing  its execution",
           fontsize=sizingFont)
 plt.savefig('../UXVIEWS/4Compare/xCompare2.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
-plt.savefig('../UXviews/xCompare2.png')
 plt.show()
 
 print("==================|SCORE_close_X3|========================")
@@ -159,10 +147,8 @@ plt.title("3-Times spend for algorithm completing  its execution",
           fontsize=sizingFont)
 plt.title('3-ACCURACY-SECOND VERTICAL', fontsize=sizingFont)
 plt.xticks(rotation=30)
-# plt.ylim(0, 100)
 plt.savefig('../UXVIEWS/4Compare/xCompare3.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)
-plt.savefig('../UXviews/xCompare3.png')
 plt.show()
 # plt.close()
 

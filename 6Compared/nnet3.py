@@ -180,7 +180,7 @@ plt.ylabel("Error for all training instances")
 # plt.show()
 plt.suptitle('4a.=ANN-Manuaul design-ERRORS INVOVED IN TRAINING==')
 plt.savefig("4_AI_manual.png")
-plt.savefig('../UXviews/others/D4.png')
+plt.savefig('../UXviews/4Compare/D4.png')
 plt.show()
 
 print('===========================Four==========================================')

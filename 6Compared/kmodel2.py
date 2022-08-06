@@ -172,7 +172,7 @@ for metric in metrics:
     ax22.plot(training.history['val_'+metric], label=metric)    
     ax22.set_ylabel("Score", color="steelblue")    
 #plt.show()
-plt.suptitle("========tile3=====175===========")
+plt.suptitle("c1========tile3=====175===========")
 #plt.savefig("3A_AI_manual.png")
 plt.savefig('../UXviews/4Compare/C1.png')
 plt.show()
@@ -227,20 +227,9 @@ explainer_shap(model,
                X_train=X, 
                task="classification", #task="regression"
                top=10)
-plt.suptitle('3B-Combined-3a-scratch.png')
+plt.suptitle('2c-Combined-a-scratch.png')
 plt.title('cOMBINED-3b-scratch.png')
-#plt.savefig('3-scratch.png')
 plt.savefig('../UXviews/4Compare/C2.png')
 
-# explainer_shap(model, 
-#                X_names=list_feature_names, 
-#                X_instance=X[i], 
-#                X_train=X, 
-#                task="regression",
-#                top=10)
-# plt.suptitle('cOMBINED-3a-scratch.png')
-# plt.title('cOMBINED-3b-scratch.png')
-# plt.savefig('3-scratch.png')
-# plt.savefig('../UXviews/4Compare/T3C.png')
 
 print('====================|END-tHREE|====================')

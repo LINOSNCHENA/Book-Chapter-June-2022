@@ -17,7 +17,7 @@ fontSized = 15
 n_features = 10
 seed = 1
 batch_size = 1
-epochs = 150
+epochs = 5
 numpy.random.seed(seed)
 plotName = "Deep-Learning | Sisfall-dataset "
 
@@ -61,7 +61,7 @@ outputs = layers.Dense(name="output", units=1, activation='sigmoid')(h2)
 model = models.Model(inputs=inputs, outputs=outputs, name="DeepNN")
 # fix random seed for reproducibility
 print("=========================================|MOBIACT_DATASET|=======================1==============")
-dataset = np.loadtxt('./../6dataXYZ/YSis1ALLs.csv', delimiter=",")
+dataset = np.loadtxt('./../7Data/YSis1ALLs.csv', delimiter=",")
 Y = dataset[:, 0:1]
 X = dataset[:, 0:10]
 print(X.shape)
@@ -79,7 +79,7 @@ print(history.history.keys())
 scores = model.evaluate(X, Y, verbose=0)
 print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
 # serialize model to JSON
-plot_model(model, to_file='../UXViews/2deepLearn/A1.png',title="1-MODEL DESIGN AND IMPLEMENTATION-SISFALL",
+plot_model(model, to_file='../UXViews/2deepLearn/A1.png',# title="1-MODEL DESIGN AND IMPLEMENTATION-SISFALL",
            show_shapes=True, show_layer_names=True)
 print("=============================================11================================4===============")
 print(model.metrics_names)

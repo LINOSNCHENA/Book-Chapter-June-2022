@@ -26,7 +26,7 @@ kalas = ['palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green', 'palegreen
          'palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green', 'palegreen', 'orange', 'yellow', 'gray', 'skyblue', 'green']
 
 print("=================================|TABLE1_TRAINING_DATA|========================25==============")
-df1 = pd.read_csv("./../6dataXYZ/ucihar4x.csv")
+df1 = pd.read_csv("./../7Data/ucihar4x.csv")
 df1 = pd.DataFrame(df1)
 A1 = len(df1.loc[df1['ActivityName'].isin(['LAYING'])])
 A2 = len(df1.loc[df1['ActivityName'].isin(['STANDING'])])
@@ -88,7 +88,7 @@ print(df3)
 
 print('=======================================|TABLE2_TESTING_DATA|==========================85================')
 
-df1 = pd.read_csv("./../6dataxyz/ucihart2.csv")
+df1 = pd.read_csv("./../7Data/ucihart2.csv")
 A1 = len(df1.loc[df1['ActivityName'].isin(['LAYING'])])
 A2 = len(df1.loc[df1['ActivityName'].isin(['STANDING'])])
 A3 = len(df1.loc[df1['ActivityName'].isin(['SITTING'])])

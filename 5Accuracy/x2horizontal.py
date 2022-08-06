@@ -1,17 +1,15 @@
 import warnings
-import cv2
 import matplotlib.pyplot as plt
 from pandas.plotting import table
-import numpy as np
 from matplotlib import pyplot as plt
 import pandas as pd
-plt.rcParams["figure.figsize"] = [18.50, 5.50]
-plt.rcParams["figure.autolayout"] = True
-sizingFont = 15
+
 warnings.simplefilter('ignore')
 plt.rcParams['figure.figsize'] = [12, 8]  # Plot-frame
 plt.rcParams["figure.autolayout"] = True
 plt.rcParams.update({'font.size': 15})  # Inside
+sizingFont = 15
+
 print("===================================|ORIGINAL|================================1=============")
 
 df1 = pd.read_csv("ACC/ACCURACYSISFALL.csv", header=1,)
@@ -61,7 +59,6 @@ plt.grid(True)
 plt.suptitle('1-ACCURACY-HORIZONTAL ALL THREE DATASETS')
 plt.title('ACCURACY-HORIZONTAL')
 plt.tight_layout()
-plt.savefig('../UXVIEWS/VH1.png', dpi=99, bbox_inches='tight')
 plt.savefig('../UXVIEWS/3ACC/VH1.png', dpi=99, bbox_inches='tight')
 plt.show()
 
@@ -93,8 +90,7 @@ tabla.set_fontsize(12)  # if ++fontsize is necessary ++colWidths
 tabla.scale(1.2, 1.2)  # change size table
 plt.suptitle('2-ACCURACY-VERTICAL| All three datasets')
 plt.title('ACCURACY-VERTICAL| All three datasets')
-plt.savefig('../UXVIEWS/3ACC/VH2.png', dpi=99,
-            bbox_inches='tight', transparent=True)
+plt.savefig('../UXVIEWS/3ACC/VH2.png', dpi=99,bbox_inches='tight', transparent=True)
 plt.show()
 
 print("===================================|Plotting_THIRD|============================4=============")
@@ -127,8 +123,7 @@ tabla.set_fontsize(12)  # if ++fontsize is necessary ++colWidths
 tabla.scale(1.2, 1.2)  # change size table
 plt.suptitle('3-ACCURACY-SECOND VERTICAL - All three datasets')
 plt.title('ACCURACY-SECOND VERTICAL')
-plt.savefig('../UXVIEWS/3ACC/VH3.png', dpi=99,
-            bbox_inches='tight', transparent=True)
+plt.savefig('../UXVIEWS/3ACC/VH3.png', dpi=99,bbox_inches='tight', transparent=True)
 plt.show()
 
 print("===================================|s2H_completed_Successufly|=====================|HORIZONTAL|===========")

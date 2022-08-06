@@ -124,7 +124,6 @@ axes[1].set_xlabel("Epoch", fontsize=14)
 axes[1].plot(train_accuracy_results)
 # plt.show()
 plt.suptitle("1B-Visualaization of the loss and accuracy of prediction")
-plt.savefig("1_AI_manual.png")
 plt.savefig('../UXviews/4Compare/A2.png')
 plt.show()
 

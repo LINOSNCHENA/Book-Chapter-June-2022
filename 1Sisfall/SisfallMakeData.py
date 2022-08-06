@@ -40,7 +40,7 @@ df4.insert(0, 'labelz', cols_swap, True)
 df4.drop('Sisfall_Label_X4', axis=1, inplace=True)
 
 df4 = pd.DataFrame(df4)
-df4.to_csv(r'./../6dataXYZ/YSis1falls.csv', index=0)
+df4.to_csv(r'./../7Data/YSis1falls.csv', index=0)
 
 print('=========================================|SISFALL_ADL|==============================|3|=============')
 df10 = pd.read_table('../../MobiAct_Dataset_v2.0/SisFall_dataset/SE06/D01_SE06_R01.txt',
@@ -68,13 +68,13 @@ df4.drop('Sisfall_Label_X4', axis=1, inplace=True)  # Remove Colum x4
 df4.drop(df4.loc[df4['labelz'] == 'labelz'].index,
          inplace=True)  # Remove Row z
 df4 = pd.DataFrame(df4)
-df4.to_csv(r'./../6dataXYZ/YSis1ADLs.csv', index=0)
+df4.to_csv(r'./../7Data/YSis1ADLs.csv', index=0)
 
 
 print(
     '====================================|COMBINED_SISFALL|====================================[4]=============')
-df31 = pd.read_csv('./../6dataXYZ/YSis1Falls.csv', header=0, delimiter=',')
-df32 = pd.read_csv('./../6dataXYZ/YSis1ADLs.csv', header=0, delimiter=',')
+df31 = pd.read_csv('./../7Data/YSis1Falls.csv', header=0, delimiter=',')
+df32 = pd.read_csv('./../7Data/YSis1ADLs.csv', header=0, delimiter=',')
 df33 = pd.concat([df31, df32])
 df34 = df33
 df2 = df33.iloc[0:23:, -15:]  # 22-Records, last-12 headers
@@ -101,7 +101,7 @@ plt.show()
 
 df2 = pd.DataFrame(df34)
 print(df2.shape)
-df2.to_csv(r'./../6dataXYZ/YSis1ALLS.csv', index=0)
+df2.to_csv(r'./../7Data/YSis1ALLS.csv', index=0)
 
 print(
     '===========================================|Plot_Combined|=======================[5]=============')
@@ -128,42 +128,42 @@ plt.tight_layout()
 plt.savefig('../UXviews/tables/TA2.png')
 plt.show()
 print('=======================================|SISFALL_THREE_SMALL|===========================|6|=============')
-df10 = pd.read_csv('./../6dataXYZ/YSis1ALLS.csv', header=0, delimiter=',')
+df10 = pd.read_csv('./../7Data/YSis1ALLS.csv', header=0, delimiter=',')
 print(df10)
 print(df10.columns)
 df11 = df10
 df4 = df10.iloc[0:25000:, -15:]  # 22-Records, last-15X headers
 df4.loc[df4['labelz'].isin([0])]  # If contains one add to df4
-df4.to_csv(r'./../6dataXYZ/YSisFall21BZ.csv', header=0, index=0)
+df4.to_csv(r'./../7Data/YSisFall21BZ.csv', header=0, index=0)
 
 df6 = df10.iloc[25000:40000:, -15:]  # 22-Records, last-15X headers
 df6.loc[df6['labelz'].isin([1])]
-df6.to_csv(r'./../6dataXYZ/YSisFall22BP.csv', header=0, index=0)
+df6.to_csv(r'./../7Data/YSisFall22BP.csv', header=0, index=0)
 
 df7 = df10.iloc[40000:50000:, -15:]  # 22-Records, last-15X headers
 df7.loc[df7['labelz'].isin([2])]
-df7.to_csv(r'./../6dataXYZ/YSisFall23B2.csv', header=0, index=0)
+df7.to_csv(r'./../7Data/YSisFall23B2.csv', header=0, index=0)
 
 print('=========================================|SISFALL_THREE_BIG|==========================|7|=============')
 
 df4 = df10.iloc[0:35000:, -15:]  # 22-Records, last-15X headers
 df4 = df4.loc[df4['labelz'].isin([1])]
 df4 = df4.iloc[0:55:, -15:]      # 22-Records, last-15X headers
-df4.to_csv(r'./../6dataXYZ/YSisFall31S1.csv', header=0, index=0)
+df4.to_csv(r'./../7Data/YSisFall31S1.csv', header=0, index=0)
 
 df6 = df10.iloc[11982:45010:, -15:]  # 22-Records, last-15X headers
 df6 = df6.iloc[0:55:, -15:]      # 22-Records, last-15X headers
-df6.to_csv(r'./../6dataXYZ/YSisFall32SX.csv', header=0, index=0)
+df6.to_csv(r'./../7Data/YSisFall32SX.csv', header=0, index=0)
 
 df7 = df10.iloc[0:50000:, -15:]   # 22-Records, last-15X headers
 df7 = df7.loc[df7['labelz'].isin([0])]
 df7 = df7.iloc[0:55:, -15:]       # 22-Records, last-15X headers
-df7.to_csv(r'./../6dataXYZ/YSisFall33SZ.csv', header=0, index=0)
+df7.to_csv(r'./../7Data/YSisFall33SZ.csv', header=0, index=0)
 
 
 print('=================================|SISFALL_REMOVE_HEADERS|===============================|8|=============')
 
-df10.to_csv(r'./../6dataXYZ/YSis1ALLS.csv', header=0, index=0)
+df10.to_csv(r'./../7Data/YSis1ALLS.csv', header=0, index=0)
 print(df7.head(5))
 
 print(
