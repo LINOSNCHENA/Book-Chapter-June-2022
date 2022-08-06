@@ -1,4 +1,4 @@
-# START- Comparison
+#  START- Comparison
 
 Below are screen shots from the application output [ALL-TABLES]
 

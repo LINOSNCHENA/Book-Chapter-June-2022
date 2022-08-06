@@ -1,3 +1,4 @@
+from turtle import title
 import warnings
 import numpy
 import numpy as np
@@ -79,7 +80,7 @@ print(history.history.keys())
 scores = model.evaluate(X, Y, verbose=0)
 print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
 # serialize model to JSON
-plot_model(model, to_file='../UXViews/deeplean/B1.png',
+plot_model(model, to_file='../UXViews/2deepLearn/B1.png',title="1-MODEL DESIGN AND IMPLEMENTATION-MOBIACT",
            show_shapes=True, show_layer_names=True)
 print("=============================================11================================4===============")
 print(model.metrics_names)
@@ -120,14 +121,14 @@ ax.set_facecolor("beige")
 plt.plot(history.history['acc'], color="blue")
 plt.plot(history.history['val_acc'], color="red")
 plt.title('11.A1-Sequential2021_Data | Model-Accuracy-2.1', fontsize=fontSized)
-plt.title(str(plotName)+' | Model-Accuracy', fontsize=fontSized)
+plt.title('2-'+str(plotName)+' | Model-Accuracy', fontsize=fontSized)
 plt.ylabel('Accuracy ', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 # plt.axis([0, epochs, 0.0, 1.1])
 plt.legend(['training  : %'+str(accArray1),
            'validation : %'+str(accArray12)], loc='best', fontsize=fontSized,)
 plt.savefig('../UXviews/B2.png')
-plt.savefig('../UXviews/deeplean/B2.png')
+plt.savefig('../UXviews/2deepLearn/B2.png')
 plt.show()
 
 
@@ -142,7 +143,7 @@ ax.set_facecolor("beige")
 plt.plot(history.history['loss'], color="fuchsia")
 plt.plot(history.history['val_loss'], color="blue")
 plt.title('12.B2-Sequential2021_Data | Model-Loss-2.2', fontsize=fontSized)
-plt.title(str(plotName)+' | Model-Loss', fontsize=fontSized)
+plt.title('3-'+str(plotName)+' | Model-Loss', fontsize=fontSized)
 plt.ylabel('Loss values', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 plt.grid(True)
@@ -150,7 +151,7 @@ plt.grid(True)
 plt.legend(['training  : %'+str(accArray2),
            'validation : %'+str(accArray22)], loc='best', fontsize=fontSized,)
 plt.savefig('../UXviews/83.png')
-plt.savefig('../UXviews/deeplean/B3.png')
+plt.savefig('../UXviews/2deepLearn/B3.png')
 plt.show()
 
 
@@ -165,14 +166,14 @@ ax.set_facecolor("beige")
 plt.plot(history.history['mean_squared_error'], color="blue")
 plt.plot(history.history['val_mean_squared_error'], color="fuchsia")
 plt.title('13-Sequential2021_Data | Model-Error-2.3', fontsize=fontSized)
-plt.title(str(plotName)+' | Model-Error', fontsize=fontSized)
+plt.title('4-'+str(plotName)+' | Model-Error', fontsize=fontSized)
 plt.ylabel('Error values', fontsize=fontSized)
 plt.xlabel('epoch', fontsize=fontSized)
 # plt.axis([0, epochs, 0, 0.99])
 plt.legend(['training  : %'+str(accArray3),
            'validation : %'+str(accArray32)], loc='best', fontsize=fontSized,)
 plt.savefig('../UXviews/B4.png')
-plt.savefig('../UXviews/deeplean/B4.png')
+plt.savefig('../UXviews/2deepLearn/B4.png')
 plt.show()
 
 print("\n ===============================|Period of Execution|====================10============\n")

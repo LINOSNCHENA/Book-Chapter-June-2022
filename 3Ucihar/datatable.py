@@ -44,7 +44,6 @@ df3 = df2.drop_duplicates(subset=["ActivityName"])
 df3.drop('subject', inplace=True, axis=1)
 df3['Records Per Activity'] = AZ
 df3["ActivityName"] = df3["ActivityName"].str.wrap(10)
-# df3.sort_values(by=['Activity'], inplace=True)
 df3.sort_values(by=['ActivityName'], inplace=True)
 df3.sort_values(by=['Records Per Activity'], inplace=True)
 df3.style.set_table_styles([dict(selector="th", props=[('max-width', '3px')])])

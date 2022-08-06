@@ -1,6 +1,6 @@
 # TWO FALL-DETECTION AND ONE HAR APPLICATIONS
 
-## 1. Three Machine Learning Algorithms
+## 1 - Three Machine Learning Algorithms
 ```
 ===========================================================01
 python SisfallMakeData.py
@@ -25,7 +25,7 @@ python Sisfalldeep.py
 python MobiActDeep.py
 python UciharDeep.py
 ```
-## 3. Compare the four Algorithms
+## 3 - Compare the four Algorithms
 ```
 ===========================================================05
 python compareEight.py
@@ -46,10 +46,11 @@ pip install tensorflow_datasets
 pip install lazypredict
 pip install Jinja2
 pip install shap
+
 conda activate diploma4
 ```
 
-## 5. Links
+## 5 - Links
 ```
 ===========================================================07
 https://www.tensorflow.org/tutorials/customization/custom_training_walkthrough

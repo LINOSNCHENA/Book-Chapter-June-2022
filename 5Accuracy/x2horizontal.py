@@ -58,8 +58,8 @@ tabla.auto_set_font_size(False)  # Activate set fontsize manually
 tabla.set_fontsize(12)  # if ++fontsize is necessary ++colWidths
 tabla.scale(1.2, 1.2)  # change size table
 plt.grid(True)
-plt.suptitle('ACCURACY-HORIZONTAL ALL THREE DATASETS')
-plt.title('1-ACCURACY-HORIZONTAL')
+plt.suptitle('1-ACCURACY-HORIZONTAL ALL THREE DATASETS')
+plt.title('ACCURACY-HORIZONTAL')
 plt.tight_layout()
 plt.savefig('../UXVIEWS/VH1.png', dpi=99, bbox_inches='tight')
 plt.savefig('../UXVIEWS/3ACC/VH1.png', dpi=99, bbox_inches='tight')
@@ -91,8 +91,8 @@ tabla = table(ax, df, loc='center', colWidths=[0.17]*len(df.columns))
 tabla.auto_set_font_size(False)  # Activate set fontsize manually
 tabla.set_fontsize(12)  # if ++fontsize is necessary ++colWidths
 tabla.scale(1.2, 1.2)  # change size table
-plt.suptitle('ACCURACY-VERTICAL| All three datasets')
-plt.title('2-ACCURACY-VERTICAL| All three datasets')
+plt.suptitle('2-ACCURACY-VERTICAL| All three datasets')
+plt.title('ACCURACY-VERTICAL| All three datasets')
 plt.savefig('../UXVIEWS/3ACC/VH2.png', dpi=99,
             bbox_inches='tight', transparent=True)
 plt.show()
@@ -125,8 +125,8 @@ tabla = table(ax, df2, loc='upper right', colWidths=[
 tabla.auto_set_font_size(False)  # Activate set fontsize manually
 tabla.set_fontsize(12)  # if ++fontsize is necessary ++colWidths
 tabla.scale(1.2, 1.2)  # change size table
-plt.suptitle('ACCURACY-SECOND VERTICAL - All three datasets')
-plt.title('3-ACCURACY-SECOND VERTICAL')
+plt.suptitle('3-ACCURACY-SECOND VERTICAL - All three datasets')
+plt.title('ACCURACY-SECOND VERTICAL')
 plt.savefig('../UXVIEWS/3ACC/VH3.png', dpi=99,
             bbox_inches='tight', transparent=True)
 plt.show()

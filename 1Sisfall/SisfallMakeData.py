@@ -92,7 +92,7 @@ ax1 = ax.table(cellText=df2.values, colLabels=df2.columns,
                loc='center', fontsize=sizingFont)
 ax1.auto_set_font_size(False)
 ax1.set_fontsize(sizingFont)
-plt.suptitle('../UXviews/tables/TA1.png')
+plt.suptitle('1-UXviews/tables/TA1.png')
 plt.title('DATASET_1_SISFALL | # Headers= '+str(c) + ' / '+str(len(df33.columns)) +
           ': # Records='+str(l)+'/'+str(len(df33))+'|', fontsize=sizingFont, color='green', fontweight="bold")
 plt.tight_layout()
@@ -121,7 +121,7 @@ ax1 = ax.table(cellText=df4.values, colLabels=df4.columns,
                loc='center', fontsize=sizingFont)
 ax1.auto_set_font_size(False)
 ax1.set_fontsize(sizingFont)
-plt.suptitle('../UXviews/tables/TA2.png')
+plt.suptitle('2-UXviews/tables/TA2.png')
 plt.title('DATASET_1_SISFALL | # Headers= '+str(c) + ' / '+str(len(df2.columns)) +
           ': # Records='+str(l)+'/'+str(len(df2))+'|', fontsize=sizingFont, color='green', fontweight="bold")
 plt.tight_layout()

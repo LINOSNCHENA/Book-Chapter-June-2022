@@ -26,18 +26,12 @@ print("==================================|Dataset_Used|=========================
 
 
 df2 = pd.read_csv(urlDataset, header=0, delimiter=",")
-print(df2.head(5))
-print(df2.shape)
-# df2.columns = ['class_var', 'X1',	'X2',	'X3',
-#                'Y1',	'Y2',	'Y3',	'Z1', "Z2",	'Z3']
 df = pd.DataFrame(df2)
 df2 = df2.apply(pd.to_numeric)
-# corrs = df2.corr()['class_var'].abs()
 corrs = df2.corr()['Activity'].abs()
 columns = corrs[corrs > .01].index
 corrs = corrs.filter(columns)
-corrs
-# print(corrs)
+
 X = df2.iloc[:, 1:19]
 Y = df2.iloc[:, 0:1]
 # print(df.head(5))
@@ -53,11 +47,9 @@ train_X, test_X, train_Y, test_Y = train_test_split(
 print(train_X.shape, test_X.shape)
 print()
 print('Number of rows in Train dataset: {train_df.shape[0]}')
-#print(train_Y['class_var'].value_counts())
 print(train_Y['Activity'].value_counts())
 print()
 print('Number of rows in Test dataset: {test_df.shape[0]}')
-# print(test_Y['class_var'].value_counts())
 print(test_Y['Activity'].value_counts())
 
 model = xgb.XGBClassifier(max_depth=12,
@@ -80,8 +72,7 @@ predictions = [round(value) for value in y_pred]
 accuracy = accuracy_score(test_Y, predictions)
 print("Accuracy: %.2f%%" % (accuracy * 100.0))
 # save model to file
-pickle.dump(model, open("x1_model.pkl", "wb"))
-# plot_model(model, to_file='../UXViews/ONE/883A.png', show_shapes=True, show_layer_names=True)
+pickle.dump(model, open("model_UNICHAR.pkl", "wb"))
 print("=================================|Plot1-Scores|=|Importance|=============================6==============")
 
 # - cross validataion
@@ -96,12 +87,12 @@ print(cm)
 
 # Feature importance-  Plot the top 7 features
 xgboost.plot_importance(model, max_num_features=21)
-plt.suptitle('SuperTitle XGBoost Features(1) Importance 1| '+plotMethod, fontsize=sizingFont+4)
+plt.suptitle('1-SuperTitle XGBoost Features(1) Importance 1| '+plotMethod, fontsize=sizingFont+4)
 plt.title('XGBoost Features(2) Importance 2| '+plotMethod, fontsize=sizingFont)
 plt.grid(True)
 plt.tight_layout()
 plt.savefig('../UXviews/C1.png')
-plt.savefig('../UXviews/1sisfall/C1.png')
+plt.savefig('../UXviews/1machLearn/C1.png')
 plt.show()
 # Predict the trading signal on test datset
 y_pred = model.predict(test_X)
@@ -120,11 +111,11 @@ plt.xlabel('Predicted values', fontsize=sizingFont)
 plt.ylabel('Actual value', fontsize=sizingFont)
 plt.xticks(rotation=40, fontsize=sizingFont)
 plt.yticks(rotation=40, fontsize=sizingFont)
-plt.suptitle('Xgboost Confusion Matrix | '+datasetName, fontsize=sizingFont+2)
+plt.suptitle('2-Xgboost Confusion Matrix | '+datasetName, fontsize=sizingFont+2)
 plt.tight_layout()
 plt.grid(True)
 plt.savefig('../UXviews/C2.png')
-plt.savefig('../UXviews/1sisfall/C2.png')
+plt.savefig('../UXviews/1machLearn/C2.png')
 plt.show()
 print("======================================|Three_Plots|=====================================8============")
 
@@ -144,12 +135,12 @@ ax.plot(x_axis, results['validation_1']['auc'],
 ax.legend(loc="best",fontsize=sizingFont)
 plt.ylabel('Accuracy',fontsize=sizingFont)
 # plt.axis([0, epochs, 0.0000, 1.2000])
-plt.title('XGBoost Area Under The Curve(AUC) Accuracy | ' +
+plt.title('3-XGBoost Area Under The Curve(AUC) Accuracy | ' +
           datasetName, fontsize=sizingFont)
 plt.grid(True)
 plt.tight_layout()
 plt.savefig('../UXviews/C3.png')
-plt.savefig('../UXviews/1sisfall/C3.png')
+plt.savefig('../UXviews/1machLearn/C3.png')
 plt.show()
 
 # plot log loss
@@ -164,11 +155,11 @@ ax.legend(fontsize=sizingFont, loc="best")
 plt.ylabel('Accuracy',fontsize=sizingFont)
 #plt.axis([0, epochs, 0.0, 1.1])
 plt.title('8.34-XGBoost LogLoss | '+datasetName, fontsize=sizingFont)
-plt.title('XGBoost LogLoss | '+datasetName, fontsize=sizingFont)
+plt.title('4-XGBoost LogLoss | '+datasetName, fontsize=sizingFont)
 plt.grid(True)
 plt.tight_layout()
 plt.savefig('../UXviews/C4.png')
-plt.savefig('../UXviews/1sisfall/C4.png')
+plt.savefig('../UXviews/1machLearn/C4.png')
 plt.show()
 
 # plot classification error
@@ -181,10 +172,10 @@ ax.plot(x_axis, results['validation_1']['error'],
         label='Test-  %'+str(round(a2*100, 4)))
 ax.legend(loc="best",fontsize=sizingFont)
 plt.ylabel('Error in classification',fontsize=sizingFont)
-plt.title('XGBoost Classification Error | '+datasetName, fontsize=sizingFont)
+plt.title('5-XGBoost Classification Error | '+datasetName, fontsize=sizingFont)
 plt.grid(True)
 plt.tight_layout()
 plt.savefig('../UXviews/C5.png')
-plt.savefig('../UXviews/1sisfall/C5.png')
+plt.savefig('../UXviews/1machLearn/C5.png')
 plt.show()
 print("==========================|SISFALL_Successfully_Completed!|========================|XGBoost|=================")

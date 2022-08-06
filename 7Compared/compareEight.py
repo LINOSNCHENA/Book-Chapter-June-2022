@@ -44,7 +44,6 @@ models.append(('5-GNB', GaussianNB()))
 models.append(('6-SVM', SVC()))
 models.append(('7-RF', RandomForestClassifier()))
 models.append(('8-XG', XGBClassifier(eval_metric='logloss')))
-# models.append(('9-Lrg-BAD', LinearRegression()))
 # evaluate each model in turn
 names = []
 results1 = []  # Name
@@ -115,11 +114,12 @@ print("==================|SCORE_close_X1|========================")
 label1='Time spent in completing the execution of a single task'
 label2='Computational costs for the compared Algorithms'
 label3='The period for task execution'
+
 fig=plt.figure(figsize=(12, 8))  # h=12 w=8
 plt.grid(True)
 plt.bar(names, results2, color='gray', width=0.9, label='Time')
 plt.legend(loc='best', fontsize=sizingFont)
-plt.title(label1, fontsize=sizingFont)
+plt.title('1-'+label1, fontsize=sizingFont)
 plt.xlabel(label2, fontsize=sizingFont)
 plt.ylabel(label3, fontsize=sizingFont)
 plt.xticks(rotation=30)
@@ -139,7 +139,7 @@ plt.xlabel("Computational costs for the compared Algorithms",
 plt.ylabel("Percentage in accuracy", fontsize=sizingFont)
 plt.xticks(rotation=30)
 # plt.ylim(0, 100)
-plt.title("Accuracy acieved spend for algorithm completing  its execution",
+plt.title("2-Accuracy acieved spend for algorithm completing  its execution",
           fontsize=sizingFont)
 plt.savefig('../UXVIEWS/4Compare/xCompare2.png', dpi=99,
             fontsize=sizingFont, bbox_inches='tight', transparent=True)

@@ -89,14 +89,12 @@ print(df2.shape)
 
 
 print('========================|Copy_Then_Insert_in_1st_position_then_delete_THREE_Field|===============|3|================')
-# print((df3))
 lx = df1['label']
 cols_swap = lx
 df1.insert(0, 'Labelz', cols_swap, True)
 df1.drop('label', axis=1, inplace=True)
 df1.drop('timestamp', axis=1, inplace=True)
 df1.drop('rel_time', axis=1, inplace=True)
-# print((df3))
 lx = df2['label']
 cols_swap = lx
 df2.insert(0, 'Labelz', cols_swap, True)
@@ -147,11 +145,11 @@ ax1 = ax.table(cellText=df7.values, colLabels=df7.columns, loc ='center', colCol
 ax1 = ax.table(cellText=df7.values, colLabels=df7.columns, loc ='center', fontsize=sizingFont)
 ax1.auto_set_font_size(False)
 ax1.set_fontsize(sizingFont)
-plt.suptitle('../UXviews/tableS/TB1.png')
+plt.suptitle('1-UXviews/tables/TB1.png')
 plt.title('DATASET_2_MOBIACT | # Headers= '+str(c) + ' / '+str(len(df1.columns)) + ': # Records='+str(l)+'/'+str(len(df1))+'|', fontsize=sizingFont,          
      color='green', fontweight="bold")
 plt.tight_layout()
-plt.savefig('../UXviews/tableS/TB1.png')
+plt.savefig('../UXviews/tables/TB1.png')
 plt.show()
 
 print('=======================================|Plot_TWO|========================================[6]=============')
@@ -164,7 +162,7 @@ ax1 = ax.table(cellText=df8.values, colLabels=df8.columns, loc='center', colColo
 ax1 = ax.table(cellText=df8.values, colLabels=df8.columns, loc='center', fontsize=sizingFont)
 ax1.auto_set_font_size(False)
 ax1.set_fontsize(sizingFont)
-plt.suptitle('../UXviews/tableS/TB2.png')
+plt.suptitle('2-UXviews/tables/TB2.png')
 plt.title('DATASET_2_MOBIACT | # Headers= '+str(c) + ' / '+str(len(df2.columns)) +': # Records='+str(l)+'/'+str(len(df2))+'|', fontsize=sizingFont, color='green', fontweight="bold")
 plt.tight_layout()
 plt.savefig('../UXviews/tables/TB2.png')
