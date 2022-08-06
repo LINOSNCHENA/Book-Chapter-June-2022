@@ -27,15 +27,15 @@ Below are screen shots from the application output-UCIHAR-3
 ![ Muntu #36 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/V1.png)
 ![ Muntu #37 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/V2.png)
 ![ Muntu #38 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/V3.png)
-![ Muntu #39 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/Vh1.png)
+![ Muntu #39 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/VH1.png)
 
 Below are screen shots from the application output-COMPARE-4
 
 ![ Muntu #41 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/A1.png)
 ![ Muntu #42 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/A2.png)
 ![ Muntu #43 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare1.png)
-![ Muntu #44 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare2.png)
-![ Muntu #45 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare3.png)
+![ Muntu #44 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/xcompare2.png)
+![ Muntu #45 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/xcompare3.png)
 
 
 # End
