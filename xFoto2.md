@@ -19,8 +19,8 @@ Below are screen shots from the application output-COMPARED-6
 ![ Muntu #64 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare/C2.png)
 ![ Muntu #65 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare/D4.png)
 ![ Muntu #66 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare/xCompare1.png)
-![ Muntu #67 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare/xcompare2.png)
-![ Muntu #68 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare/xcompare3.png)
+![ Muntu #67 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare/xCompare2.png)
+![ Muntu #68 ](https://github.com/LINOSNCHENA/Book-Chapter-June-2022/blob/master/uXViews/4Compare/xCompare3.png)
 
 
 Below are screen shots from the application output [ALL-TABLES]-7
