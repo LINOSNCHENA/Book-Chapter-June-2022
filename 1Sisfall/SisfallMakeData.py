@@ -42,6 +42,15 @@ df4.drop('Sisfall_Label_X4', axis=1, inplace=True)
 df4 = pd.DataFrame(df4)
 df4.to_csv(r'./../7Data/YSis1falls.csv', index=0)
 
+print("====================|Totals-Fallx|=========================")
+inputFall1 = df10.iloc[0:4:, -15:]  # 22-Records, last-12 headers
+inputFall2 = df11.iloc[0:4:, -15:]  # 22-Records, last-12 headers
+inputFall3 = df12.iloc[0:4:, -15:]  # 22-Records, last-12 headers
+inputFall4 = df13.iloc[0:4:, -15:]  # 22-Records, last-12 headers
+fallx = pd.concat([inputFall1,inputFall2, inputFall3, inputFall4])
+fallx.to_csv(r'./../ArduinoData/sisfall_16Falls.csv', index=0)
+print(fallx.shape)
+
 print('=========================================|SISFALL_ADL|==============================|3|=============')
 df10 = pd.read_table('../../MobiAct_Dataset_v2.0/SisFall_dataset/SE06/D01_SE06_R01.txt',
                      header=1, names=names1, sep=',', escapechar=";")
@@ -69,12 +78,20 @@ df4.drop(df4.loc[df4['labelz'] == 'labelz'].index,
          inplace=True)  # Remove Row z
 df4 = pd.DataFrame(df4)
 df4.to_csv(r'./../7Data/YSis1ADLs.csv', index=0)
-
-
-print(
-    '====================================|COMBINED_SISFALL|====================================[4]=============')
+print("====================|Totals-ADLs|=========================")
+inputADL1 = df10.iloc[0:16:, -15:]  # 22-Records, last-12 headers
+inputADL2 = df11.iloc[0:16:, -15:]  # 22-Records, last-12 headers
+inputADL3 = df12.iloc[0:16:, -15:]  # 22-Records, last-12 headers
+inputADL4 = df13.iloc[0:16:, -15:]  # 22-Records, last-12 headers
+ADLx = pd.concat([inputADL1,inputADL2, inputADL3, inputADL4])
+ADLx.to_csv(r'./../ArduinoData/sisfall_64ADLs.csv', index=0)
+print(ADLx.shape)
+print('====================================|COMBINED_SISFALL|============================[4]=============')
 df31 = pd.read_csv('./../7Data/YSis1Falls.csv', header=0, delimiter=',')
 df32 = pd.read_csv('./../7Data/YSis1ADLs.csv', header=0, delimiter=',')
+# print(df31.shape)
+# print(df32.shape)
+
 df33 = pd.concat([df31, df32])
 df34 = df33
 df2 = df33.iloc[0:23:, -15:]  # 22-Records, last-12 headers
@@ -103,8 +120,7 @@ df2 = pd.DataFrame(df34)
 print(df2.shape)
 df2.to_csv(r'./../7Data/YSis1ALLS.csv', index=0)
 
-print(
-    '===========================================|Plot_Combined|=======================[5]=============')
+print('========================================|Plot_Combined|=======================[5]=============')
 df4 = df2.iloc[11980:12001:, -15:]  # 22-Records, last-15X headers
 l = len(df4)
 c = len(df4.columns)
@@ -127,7 +143,8 @@ plt.title('DATASET_1_SISFALL | # Headers= '+str(c) + ' / '+str(len(df2.columns))
 plt.tight_layout()
 plt.savefig('../UXviews/tables/TA2.png')
 plt.show()
-print('=======================================|SISFALL_THREE_SMALL|===========================|6|=============')
+
+print('====================================|SISFALL_THREE_SMALL|===========================|6|=============')
 df10 = pd.read_csv('./../7Data/YSis1ALLS.csv', header=0, delimiter=',')
 print(df10)
 print(df10.columns)
@@ -144,7 +161,7 @@ df7 = df10.iloc[40000:50000:, -15:]  # 22-Records, last-15X headers
 df7.loc[df7['labelz'].isin([2])]
 df7.to_csv(r'./../7Data/YSisFall23B2.csv', header=0, index=0)
 
-print('=========================================|SISFALL_THREE_BIG|==========================|7|=============')
+print('======================================|SISFALL_THREE_BIG|==========================|7|=============')
 
 df4 = df10.iloc[0:35000:, -15:]  # 22-Records, last-15X headers
 df4 = df4.loc[df4['labelz'].isin([1])]
@@ -161,13 +178,12 @@ df7 = df7.iloc[0:55:, -15:]       # 22-Records, last-15X headers
 df7.to_csv(r'./../7Data/YSisFall33SZ.csv', header=0, index=0)
 
 
-print('=================================|SISFALL_REMOVE_HEADERS|===============================|8|=============')
+print('=============================|SISFALL_REMOVE_HEADERS|============================|8|=============')
 
 df10.to_csv(r'./../7Data/YSis1ALLS.csv', header=0, index=0)
 print(df7.head(5))
 
-print(
-    '==============================|Statistics_In_ALL_Dataset|===============================[9]=============')
+print('=============================|Statistics_In_ALL_Dataset|=========================[9]=============')
 
 print(df11.head(5))
 df6 = df11.loc[df11['labelz'].isin([1])]
@@ -188,5 +204,4 @@ p = inflect.engine()
 sizingFont = p.number_to_words(number_of_rows1+number_of_rows2)
 print(sizingFont)
 
-print(
-    '=========================|Successfuly_Completed|===============|1SISFALL1|============[10]==============')
+print('======================|Successfuly_Completed|=============|1SISFALL1|==========[10]==============')
